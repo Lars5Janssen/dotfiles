@@ -1,4 +1,7 @@
 alias l='ls --color -l'
+alias la='l -A'
+
+alias reStow='stow ~/dotfiles/.'
 
 alias nf='neofetch'
 
