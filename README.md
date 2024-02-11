@@ -9,3 +9,4 @@ Every file in ~/bashrcsources/ will be sources.
 - .bashrc
 - i3 config
 - .env & env.sh for managing env vars
+- ranger config
