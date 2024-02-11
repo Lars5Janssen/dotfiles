@@ -12,7 +12,7 @@ alias realias='source ~/bashrcsources/aliases.sh'
 
 # edits for conf files
 alias editb='nvim ~/.bashrc'
-alias edita='nvim ~/bashrcsources/aliases.sh'
+alias edita='nvim ~/bashrcsources/aliases.sh && realias'
 alias editi3='nvim ~/.config/i3/config'
 alias gotoconf='cd ~/.config'
 alias gotodotfiles='todotdir'
