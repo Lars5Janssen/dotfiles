@@ -1,0 +1,94 @@
+palette = "catppuccin_mocha"
+
+[character]
+# Note the use of Catppuccin color 'purple'
+success_symbol = "[[☠️](white) ❯](sky)"
+error_symbol = "[✘ ❯](red)"
+vicmd_symbol = "[❮](green)"
+
+[directory]
+truncation_length = 4
+# Catppuccin 'lavender'
+style = "bold italic sky"
+
+[package]
+disabled = false
+
+[username]
+style_user = "mauve bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[git_branch]
+symbol = '🌱 '
+truncation_length = 8
+truncation_symbol = ''
+style = "bold yellow"
+
+[git_commit]
+commit_hash_length = 8
+tag_symbol = '🔖 '
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_metrics]
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+conflicted = '⚔️ '
+ahead = '[|](yellow) 🏎💨 ×${count} '
+behind = '[|](yellow) 😰 ×${count} '
+diverged = '[|](yellow) 🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} '
+up_to_date = '[|](yellow) [✓](green)  '
+untracked = '[|](yellow) 🤷 ×${count} '
+stashed = '[|](yellow) 📦 '
+modified = '[|](yellow) 📝 ×${count} '
+renamed = '[|](yellow) 👅 ×${count} '
+deleted = '[|](yellow) 🗑️ ×${count} '
+staged = '[|](yellow) 📦 [++\($count\)](green) '
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+[docker_context]
+format = 'via [🐋 $context](blue bold)'
+
+[cmd_duration]
+# disabled = true
+min_time = 2_000
+show_milliseconds = true
+show_notifications = true
+min_time_to_notify = 45_000
+format = "[  $duration](bold yellow)"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"

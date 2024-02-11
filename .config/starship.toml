@@ -1,69 +1,51 @@
 palette = "catppuccin_mocha"
 
+format = """
+[](blue)\
+$username\
+[](bg:#434C5E fg:#3B4252)\
+$directory\
+[](fg:#434C5E bg:#4C566A)\
+$git_branch\
+$git_status\
+[](fg:#4C566A bg:#86BBD8)\
+[](fg:#86BBD8 bg:#06969A)\
+$docker_context\
+[](fg:#06969A bg:#33658A)\
+$time\
+[ ](fg:#33658A)\
+"""
+
 [character]
-# Note the use of Catppuccin color 'purple'
-success_symbol = "[[☠️](white) ❯](sky)"
-error_symbol = "[✘ ❯](red)"
-vicmd_symbol = "[❮](green)"
+# Note the use of Catppuccin color 'maroon'
+success_symbol = "[[♥](green) ❯](maroon)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style) $path'
+
+[git_branch]
+symbol = ""
+style = "bg:#4C566A"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#4C566A"
+format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[ $time ]($style)'
 
 [directory]
 truncation_length = 4
 # Catppuccin 'lavender'
-style = "bold italic sky"
-
-[package]
-disabled = false
-
-[username]
-style_user = "mauve bold"
-format = "[$user]($style) "
-disabled = false
-show_always = true
-
-[git_branch]
-symbol = '🌱 '
-truncation_length = 8
-truncation_symbol = ''
-style = "bold yellow"
-
-[git_commit]
-commit_hash_length = 8
-tag_symbol = '🔖 '
-style = "bold white"
-
-[git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = '[🍒 PICKING](bold red)'
-
-[git_metrics]
-added_style = 'bold blue'
-format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
-
-[git_status]
-conflicted = '⚔️ '
-ahead = '[|](yellow) 🏎💨 ×${count} '
-behind = '[|](yellow) 😰 ×${count} '
-diverged = '[|](yellow) 🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} '
-up_to_date = '[|](yellow) [✓](green)  '
-untracked = '[|](yellow) 🤷 ×${count} '
-stashed = '[|](yellow) 📦 '
-modified = '[|](yellow) 📝 ×${count} '
-renamed = '[|](yellow) 👅 ×${count} '
-deleted = '[|](yellow) 🗑️ ×${count} '
-staged = '[|](yellow) 📦 [++\($count\)](green) '
-style = "bright-white"
-format = "$all_status$ahead_behind"
-
-[docker_context]
-format = 'via [🐋 $context](blue bold)'
-
-[cmd_duration]
-# disabled = true
-min_time = 2_000
-show_milliseconds = true
-show_notifications = true
-min_time_to_notify = 45_000
-format = "[  $duration](bold yellow)"
+style = "bold lavender"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
