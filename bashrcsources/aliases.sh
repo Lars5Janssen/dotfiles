@@ -17,6 +17,8 @@ alias edita='nvim ~/bashrcsources/aliases.sh'
 # audio
 alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
 
+# display
+alias setlaporientation='xrandr --output DP-2 --left-of eDP-1'
 # uncategorized aliases
 alias n='nvim'
 alias r='ranger'
