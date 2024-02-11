@@ -4,7 +4,7 @@ alias la='l -A'
 
 # ~/dotfiles/ related aliases
 alias todotdir='cd ~/dotfiles'
-alias reStow='todotdir && stow -R . && cd -'
+alias restow='todotdir && stow -R . && cd -'
 alias dotpush='todotdir && git status && git commit -a && git push && cd -'
 alias dotstatus='todotdir && git status && cd -'
 alias dotaddall='todotdir && git add . && cd -'
