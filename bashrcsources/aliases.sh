@@ -24,6 +24,10 @@ alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | 
 # display
 alias setlaporientation='xrandr --output DP-2 --left-of eDP-1'
 
+# Wifi
+alias wificon='nmtui-connect'
+alias obwifi='nmtui-connect Osterberg'
+
 # uncategorized aliases
 alias n='nvim'
 alias r='ranger'
