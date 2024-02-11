@@ -18,4 +18,4 @@ alias gay='lolcat'
 
 alias nf='neofetch'
 
-alias setBtAudio="pactl set-default-sink $(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
+alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
