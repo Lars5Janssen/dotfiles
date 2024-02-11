@@ -10,15 +10,20 @@ alias dotstatus='todotdir && git status && cd -'
 alias dotaddall='todotdir && git add . && cd -'
 alias realias='source ~/bashrcsources/aliases.sh'
 
-# edits for .bashrc files
+# edits for conf files
 alias editb='nvim ~/.bashrc'
 alias edita='nvim ~/bashrcsources/aliases.sh'
+alias editi3='nvim ~/.config/i3/config'
+alias gotoconf='cd ~/.config'
+alias gotodotfiles='todotdir'
+alias gotobrcsources='cd ~/bashrcsources'
 
 # audio
 alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
 
 # display
 alias setlaporientation='xrandr --output DP-2 --left-of eDP-1'
+
 # uncategorized aliases
 alias n='nvim'
 alias r='ranger'
