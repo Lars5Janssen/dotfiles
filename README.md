@@ -7,6 +7,7 @@ Every file in ~/bashrcsources/ will be sources.
 
 # Everything this dotfiles repo contains:
 - .bashrc
-- i3 config
 - .env & env.sh for managing env vars
+- i3 config
 - ranger config
+- alacritty config
