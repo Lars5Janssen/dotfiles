@@ -11,3 +11,4 @@ Every file in ~/bashrcsources/ will be sources.
 - i3 config
 - ranger config
 - alacritty config
+- starship config
