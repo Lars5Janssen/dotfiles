@@ -1,6 +1,5 @@
 for FILE in ~/bashrcsources/*; do
 	source $FILE
-	echo $FILE
 done
 
 # >>> conda initialize >>>
