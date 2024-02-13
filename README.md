@@ -13,3 +13,4 @@ Every file in ~/bashrcsources/ will be sources.
 - ranger config
 - alacritty config
 - starship config
+- nvim config with lazyvim

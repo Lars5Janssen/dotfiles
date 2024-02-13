@@ -1,51 +1,63 @@
 palette = "catppuccin_mocha"
 
 format = """
-[](blue)\
+[](mauve)\
+$os\
 $username\
-[](bg:#434C5E fg:#3B4252)\
 $directory\
-[](fg:#434C5E bg:#4C566A)\
+[](fg:mauve bg:pink)\
 $git_branch\
 $git_status\
-[](fg:#4C566A bg:#86BBD8)\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:pink bg:lavender)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](fg:lavender bg:flamingo)\
+[](fg:flamingo bg:mauve)\
 $time\
-[ ](fg:#33658A)\
+[ ](fg:mauve)\
+$character\
 """
+
+[username]
+format = "[$user ](fg:base bold bg:mauve)"
+disabled = false
+show_always = true
 
 [character]
 # Note the use of Catppuccin color 'maroon'
-success_symbol = "[[♥](green) ❯](maroon)"
+success_symbol = "[[♥](green) ❯](mauve)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [docker_context]
 symbol = " "
-style = "bg:#06969A"
+style = "bg:lavender"
 format = '[ $symbol $context ]($style) $path'
 
 [git_branch]
 symbol = ""
-style = "bg:#4C566A"
+style = "fg:base bg:pink"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#4C566A"
+style = "fg:base bg:pink"
 format = '[$all_status$ahead_behind ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
+style = "fg:base bg:mauve"
 format = '[ $time ]($style)'
 
 [directory]
+format = '[$path]($style)'
 truncation_length = 4
+truncation_symbol = '../'
 # Catppuccin 'lavender'
-style = "bold lavender"
+style = "fg:base bg:mauve"
+
+[os]
+style = "fg:base bg:mauve"
+disabled = false
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
