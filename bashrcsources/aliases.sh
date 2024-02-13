@@ -2,6 +2,14 @@
 alias l='ls --color -l'
 alias la='l -A'
 
+# git
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gcp='git commit && git push'
+alias gcap='git commit -a $$ git push'
+
 # ~/dotfiles/ related aliases
 alias todotdir='cd ~/dotfiles'
 alias restow='todotdir && stow -R . && cd -'
