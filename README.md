@@ -14,3 +14,8 @@ Every file in ~/bashrcsources/ will be sources.
 - alacritty config
 - starship config
 - nvim config with lazyvim
+- polybar config and launchscript
+
+# TODO
+- [ ] polybar launchscript needs chmod +x, this will not be auto replicated on a new system
+- [ ] nvim setup does not work on new system
