@@ -18,6 +18,9 @@ exec feh --bg-scale ~/Pictures/00066-337656526.png
 bindsym $mod+Control+g exec setxkbmap de
 bindsym $mod+Control+e exec setxkbmap us
 
+# Focuse does not follow mouse
+focus_follows_mouse no
+
 # Firefox
 bindsym Control+Shift+b exec firefox
 
