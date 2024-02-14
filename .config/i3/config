@@ -25,7 +25,7 @@ focus_follows_mouse no
 bindsym Control+Shift+b exec firefox
 
 # polybar
-exec --no-startup-id polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 # Move Workspaces over Monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
