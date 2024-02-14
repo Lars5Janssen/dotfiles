@@ -19,3 +19,4 @@ Every file in ~/bashrcsources/ will be sources.
 # TODO
 - [ ] polybar launchscript needs chmod +x, this will not be auto replicated on a new system
 - [ ] nvim setup does not work on new system
+- [ ] nvim errors

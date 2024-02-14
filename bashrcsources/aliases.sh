@@ -23,9 +23,10 @@ alias editb='nvim ~/.bashrc'
 alias edita='nvim ~/bashrcsources/aliases.sh && realias'
 alias edits='nvim ~/.config/starship.toml'
 alias editi3='nvim ~/.config/i3/config'
-alias gotoconf='cd ~/.config'
-alias gotodotfiles='todotdir'
-alias gotobrcsources='cd ~/bashrcsources'
+
+# ranger gotos
+alias gotodotfiles='ranger ~/dotfiles/'
+alias gotodotconfig='ranger ~/dotfiles/.config/'
 
 # audio
 alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
