@@ -26,6 +26,8 @@ bindsym Control+Shift+b exec firefox
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+bindsym $mod+Control+Shift+p exec polybar-msg cmd quit
+
 # Move Workspaces over Monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
