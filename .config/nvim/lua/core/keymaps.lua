@@ -3,4 +3,8 @@ vim.g.maplocalleader = ' '
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
-vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>') -- Requires Plugin Nvim Tree
+-- Bindings for Nvim Tree Plugin --
+vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>') 
+
+-- Bindings for Telescope Plugin --
+
