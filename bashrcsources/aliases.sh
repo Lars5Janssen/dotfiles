@@ -1,6 +1,7 @@
 # ls alias
 alias l='ls --color -l'
 alias la='l -A'
+alias lt='tree'
 
 # git
 alias gs='git status'

@@ -13,10 +13,9 @@ Every file in ~/bashrcsources/ will be sources.
 - ranger config
 - alacritty config
 - starship config
-- nvim config with lazyvim
+- nvim config with packer.nvim 
 - polybar config and launchscript
 
 # TODO
 - [ ] polybar launchscript needs chmod +x, this will not be auto replicated on a new system
-- [ ] nvim setup does not work on new system
-- [ ] nvim errors
+- [ ] Do fonts work on new Computer?
