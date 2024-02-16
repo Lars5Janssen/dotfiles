@@ -12,7 +12,7 @@
 set $mod Mod1
 
 # Wallpaper
-exec feh --bg-scale ~/Pictures/00066-337656526.png
+exec feh --bg-fill ~/Pictures/00066-337656526.png
 
 # Keyboard Layout Switcher
 bindsym $mod+Control+g exec setxkbmap de
