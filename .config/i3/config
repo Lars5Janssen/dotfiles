@@ -11,6 +11,8 @@
 
 set $mod Mod1
 
+gaps inner 15px
+
 # Wallpaper
 exec feh --bg-fill ~/Pictures/00066-337656526.png
 
@@ -209,8 +211,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-gaps inner 10px
 
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd
