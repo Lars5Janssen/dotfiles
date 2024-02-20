@@ -9,7 +9,8 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gcp='git commit && git push'
-alias gcap='git commit -a $$ git push'
+alias gcap='git commit -a && git push'
+alias gaacp='git add . && git commit -a && git push'
 
 # ~/dotfiles/ related aliases
 alias todotdir='cd ~/dotfiles'
@@ -44,6 +45,7 @@ alias obwifi='nmtui-connect Osterberg'
 alias n='nvim'
 alias r='ranger'
 
+alias checkbat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias gay='lolcat'
 
 alias nf='neofetch'
