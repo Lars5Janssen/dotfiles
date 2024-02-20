@@ -3,6 +3,7 @@ palette = "catppuccin_mocha"
 add_newline = true
 
 format = """
+$line_break\
 [](mauve)\
 $os\
 $username\
