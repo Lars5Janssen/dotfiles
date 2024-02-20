@@ -1,4 +1,4 @@
 require("core.settings")
 require("core.plugins")
-require("core.plugin_config.init")
+require("core.plugin_init")
 require("core.keymaps")
