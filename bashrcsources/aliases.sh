@@ -24,6 +24,7 @@ alias editb='nvim ~/.bashrc'
 alias edita='nvim ~/bashrcsources/aliases.sh && realias'
 alias edits='nvim ~/.config/starship.toml'
 alias editi3='nvim ~/.config/i3/config'
+alias edital='nvim ~/.config/alacritty/alacritty.toml'
 
 # ranger gotos
 alias gotodotfiles='ranger ~/dotfiles/'

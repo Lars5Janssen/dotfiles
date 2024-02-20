@@ -1,5 +1,7 @@
 palette = "catppuccin_mocha"
 
+add_newline = true
+
 format = """
 [](mauve)\
 $os\
@@ -14,6 +16,7 @@ $docker_context\
 [](fg:flamingo bg:mauve)\
 $time\
 [ ](fg:mauve)\
+$line_break\
 $character\
 """
 
