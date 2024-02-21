@@ -31,6 +31,9 @@ alias edital='nvim ~/.config/alacritty/alacritty.toml'
 alias gotodotfiles='ranger ~/dotfiles/'
 alias gotodotconfig='ranger ~/dotfiles/.config/'
 
+# reload waybar
+alias reloadwaybar='killall waybar && waybar --config ~/.config/waybar/config'
+
 # audio
 alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
 
