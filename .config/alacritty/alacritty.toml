@@ -10,7 +10,7 @@ TERM = "xterm-256color"
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
-size = 12 
+size = 10 
 
 [scrolling]
 history = 10000
@@ -19,3 +19,22 @@ multiplier = 3
 [window.padding]
 x = 5
 y = 5
+
+[keyboard]
+bindings = [
+  { key = "R", mods = "Control|Shift", action = "ResetFontSize"},
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
+  ]
