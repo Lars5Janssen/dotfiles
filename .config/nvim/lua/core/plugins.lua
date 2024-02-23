@@ -23,10 +23,10 @@ return require('packer').startup(function(use)
     'nvim-tree/nvim-web-devicons',
   }
 
-  -- lualine: ???
+  -- lualine: statusline at the bottom
   use 'nvim-lualine/lualine.nvim'
 
-  -- Treesitter: ???
+  -- Treesitter: Tree-based highlight functionality
   use 'nvim-treesitter/nvim-treesitter'
 
   -- Colorizer: Displays real colors for colorcodes
@@ -56,12 +56,17 @@ return require('packer').startup(function(use)
   }
   -- Snippet Sources
   use {
-    'hrsh7th/cmp-nvim-lsp',       -- LSP source for nvim-cmp
-    'saadparwaiz1/cmp_luasnip',   -- Snippets source for nvim-cmp
-    'chrisgrieser/cmp-nerdfont',  -- Source for nerdfonts
-    'hrsh7th/cmp-nvim-lua',       -- Source for Nvim Lua API
-    'hrsh7th/cmp-path',           -- Sources for paths
+    'hrsh7th/cmp-nvim-lsp',           -- LSP source for nvim-cmp
+    'hrsh7th/cmp-nvim-lua',           -- Source for Nvim Lua API
+    'saadparwaiz1/cmp_luasnip',       -- Snippets source for nvim-cmp
+    'chrisgrieser/cmp-nerdfont',      -- Source for nerdfonts
+    'rafamadriz/friendly-snippets',   -- Source for VS-Code like snippets
+    'hrsh7th/cmp-path',               -- Sources for paths
   }
+
+  -- GIT
+  use 'lewis6991/gitsigns.nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
