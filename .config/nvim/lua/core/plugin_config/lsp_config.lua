@@ -14,7 +14,7 @@ local on_attach = function(_, _)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
 
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-  vim.keymap.set('n', 'gD', vim.lsp.buf.implementation, opts)
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
   vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, opts)
 end
 
