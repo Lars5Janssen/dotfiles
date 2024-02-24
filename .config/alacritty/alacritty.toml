@@ -16,6 +16,9 @@ size = 10
 history = 10000
 multiplier = 3
 
+[window]
+opacity = 0.9
+
 [window.padding]
 x = 5
 y = 5
