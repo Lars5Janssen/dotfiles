@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
   -- Colorizer: Displays real colors for colorcodes
   use 'norcalli/nvim-colorizer.lua'
 
-  -- Telescope: ???
+  -- Telescope: Find files and grep
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
@@ -64,8 +64,9 @@ return require('packer').startup(function(use)
     'hrsh7th/cmp-path',               -- Sources for paths
   }
 
-  -- GIT
+  -- git
   use 'lewis6991/gitsigns.nvim'
+  use 'tpope/vim-fugitive'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
