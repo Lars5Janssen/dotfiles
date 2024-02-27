@@ -3,6 +3,10 @@ alias l='ls --color -l'
 alias la='l -A'
 alias lt='tree'
 
+# system controll
+alias lock='loginctl lock-session'
+alias sus='systemctl suspend'
+
 # git
 alias gs='git status'
 alias ga='git add'
