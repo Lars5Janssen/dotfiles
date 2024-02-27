@@ -1,5 +1,4 @@
-local servers = { "lua_ls", "marksman", "bashls", "jdtls", "jedi_language_server", "dockerls",
-  "docker_compose_language_service" }
+local servers = { "lua_ls", "marksman", "bashls", "jdtls", "dockerls", "docker_compose_language_service" }
 
 require("mason").setup()
 require("mason-lspconfig").setup({
@@ -14,6 +13,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<leader>rq', vim.diagnostic.reset)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

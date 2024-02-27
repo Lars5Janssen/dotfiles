@@ -14,8 +14,7 @@ set $mod Mod1
 gaps inner 15px
 
 # Wallpaper
-#exec feh --bg-fill ~/Pictures/00066-337656526.png
-exec picom
+exec feh --bg-fill ~/Pictures/jason-leung-AxKqisRPQSA-unsplash\(1\).jpg 
 # Keyboard Layout Switcher
 bindsym $mod+Control+g exec setxkbmap de
 bindsym $mod+Control+e exec setxkbmap us
@@ -79,7 +78,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec alacritty
 
 # file manager
-bindsym $mod+p exec alacritty -e "ranger"
+bindsym Mod4+e exec alacritty -e "ranger"
 
 # kill focused window
 bindsym $mod+q kill
