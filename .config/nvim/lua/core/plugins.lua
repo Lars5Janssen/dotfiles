@@ -1,104 +1,47 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+local lazypath = vim.fn.stdpath('data') .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  })
 end
-
-local packer_bootstrap = ensure_packer()
-
-return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  -- My plugins here
-  -- Theme
-  use { 'catppuccin/nvim', as = 'catppuccin' }
-
-  -- Nvim Tree: File Browser
-  use {
+vim.opt.rtp:prepend(lazypath)
+require('lazy').setup({
+    'nvim-lua/plenary.nvim',
+    { 'catppuccin/nvim', name = "catppuccin", priority = 1000 },
     'nvim-tree/nvim-tree.lua',
     'nvim-tree/nvim-web-devicons',
-  }
-  use 'ThePrimeagen/harpoon'
-
-  -- lualine: statusline at the bottom
-  use 'nvim-lualine/lualine.nvim'
-
-  -- Treesitter: Tree-based highlight functionality
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'nvim-treesitter/playground'
-  use 'RRethy/vim-illuminate'
-
-  -- Colorizer: Displays real colors for colorcodes
-  use 'norcalli/nvim-colorizer.lua'
-
-  -- Telescope: Find files and grep
-  use {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.5',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-
-  -- Linting
-  use 'mfussenegger/nvim-lint'
-
-  -- UndoTree
-  use 'mbbill/undotree'
-
-  -- LSP
-  use {
+    'ThePrimeagen/harpoon',
+    'nvim-lualine/lualine.nvim',
+    {'nvim-treesitter/nvim-treesitter',
+        tag = 'v0.8.5.2',
+        build = ':TSUpdate',},
+    'nvim-treesitter/playground',
+    'RRethy/vim-illuminate',
+    'norcalli/nvim-colorizer.lua',
+    {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    'mfussenegger/nvim-lint',
+    'mbbill/undotree',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
-  }
-
-  -- Snippets
-  use {
-    'hrsh7th/nvim-cmp', -- Autocompletion plugin
+    'hrsh7th/nvim-cmp',
     'L3MON4D3/LuaSnip',
-  }
-  -- Snippet Sources
-  use {
-    'hrsh7th/cmp-nvim-lsp',         -- LSP source for nvim-cmp
-    'hrsh7th/cmp-nvim-lua',         -- Source for Nvim Lua API
-    'saadparwaiz1/cmp_luasnip',     -- Snippets source for nvim-cmp
-    'chrisgrieser/cmp-nerdfont',    -- Source for nerdfonts
-    'rafamadriz/friendly-snippets', -- Source for VS-Code like snippets
-    'hrsh7th/cmp-path',             -- Sources for paths
-  }
-
-  -- git
-  use 'lewis6991/gitsigns.nvim'
-  use 'tpope/vim-fugitive'
-
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-      require("which-key").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
-  }
-  use {
-    'nvimdev/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-      require('dashboard').setup {
-      }
-    end,
-    requires = { 'nvim-tree/nvim-web-devicons' }
-  }
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lua',
+    'hrsh7th/cmp-path',
+    'saadparwaiz1/cmp_luasnip',
+    'chrisgrieser/cmp-nerdfont',
+    'rafamadriz/friendly-snippets',
+    'lewis6991/gitsigns.nvim',
+    'tpope/vim-fugitive',
+    --'folke/which-key.nvim',
+    --'nvimdev/dashboard-nvim',
+})

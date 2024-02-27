@@ -5,11 +5,8 @@ require('lint').linters_by_ft = {
     'typos', 'trivy', 'compiler', },
   lua = {'selene', 'luacheck',},
 }
-
-
-vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+vim.api.nvim_create_autocmd({ "TextChanged" }, {
   callback = function()
     require("lint").try_lint()
   end,
 })
-
