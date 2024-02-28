@@ -17,25 +17,27 @@ $docker_context\
 [](fg:flamingo bg:mauve)\
 $time\
 [ ](fg:mauve)\
+$sudo\
 $line_break\
 $character\
 """
+
+[os]
+format = '[ $symbol]($style)'
+style = "fg:base bg:mauve"
+disabled = false
 
 [username]
 format = "[$user ](fg:base bold bg:mauve)"
 disabled = false
 show_always = true
 
-[character]
-# Note the use of Catppuccin color 'maroon'
-success_symbol = "[[♥](green) ❯](mauve)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
-
-[docker_context]
-symbol = " "
-style = "bg:lavender"
-format = '[ $symbol $context ]($style) $path'
+[directory]
+format = '[$path]($style)'
+truncation_length = 4
+truncation_symbol = '../'
+# Catppuccin 'lavender'
+style = "fg:base bg:mauve"
 
 [git_branch]
 symbol = ""
@@ -46,23 +48,27 @@ format = '[ $symbol $branch ]($style)'
 style = "fg:base bg:pink"
 format = '[$all_status$ahead_behind]($style)'
 
+[docker_context]
+symbol = " "
+style = "bg:lavender"
+format = '[ $symbol $context ]($style) $path'
+
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "fg:base bg:mauve"
 format = '[ $time ]($style)'
 
-[directory]
-format = '[$path]($style)'
-truncation_length = 4
-truncation_symbol = '../'
-# Catppuccin 'lavender'
-style = "fg:base bg:mauve"
-
-[os]
-format = '[ $symbol]($style)'
-style = "fg:base bg:mauve"
+[sudo]
+style = 'bold green'
+symbol = '👩‍💻 '
 disabled = false
+
+[character]
+# Note the use of Catppuccin color 'maroon'
+success_symbol = "[[♥](green) ❯](mauve)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
