@@ -12,11 +12,6 @@ require("core.plugin_config.telescope")
 require("core.plugin_config.harpoon")
 require("core.plugin_config.undotree")
 
--- LSP and more advanced code aware features
-require("core.plugin_config.lsp_config")
-require("core.plugin_config.completions")
-require("core.plugin_config.linter")
-
 --[[
 -- Git integrations
 require("core.plugin_config.git")
