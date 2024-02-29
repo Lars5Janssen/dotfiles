@@ -11,6 +11,10 @@ require('core.configs.lualine')
 require('core.configs.telescope')
 require('core.configs.harpoon')
 require('core.configs.nvim-tree')
+require('core.configs.undotree')
+
+-- git
+require('core.configs.git')
 
 -- Code awareness
 require('core.configs.mason')

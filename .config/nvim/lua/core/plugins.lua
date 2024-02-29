@@ -25,12 +25,14 @@ require('lazy').setup({
     'RRethy/vim-illuminate',
     'norcalli/nvim-colorizer.lua',
     {'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' }},
+    'mfussenegger/nvim-lint',
     {
         'mfussenegger/nvim-jdtls',
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
     },
+    'mbbill/undotree',
     {
         'hrsh7th/nvim-cmp',
         'L3MON4D3/LuaSnip',
@@ -41,5 +43,7 @@ require('lazy').setup({
         'chrisgrieser/cmp-nerdfont',
         'rafamadriz/friendly-snippets',
     },
+    'lewis6991/gitsigns.nvim',
+    'tpope/vim-fugitive',
 
 })
