@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     'nvim-lua/plenary.nvim',
     { 'catppuccin/nvim', name = "catppuccin", priority = 1000 },
-    'nvim-tree/nvim-tree.lua',
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -28,6 +27,7 @@ require('lazy').setup({
 	'nvim-tree/nvim-web-devicons',
     'ThePrimeagen/harpoon',
     'nvim-lualine/lualine.nvim',
+    'stevearc/dressing.nvim',
     {{
         'nvim-treesitter/nvim-treesitter', tag = 'v.8.5.2', build = ':TSUpdate'},
         'nvim-treesitter/playground',
@@ -43,15 +43,18 @@ require('lazy').setup({
         'neovim/nvim-lspconfig',
     },
     'mbbill/undotree',
+    -- lazy.nvim
     {
         'hrsh7th/nvim-cmp',
         'L3MON4D3/LuaSnip',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-nvim-lua',
         'hrsh7th/cmp-path',
+        'hrsh7th/cmp-buffer',
         'saadparwaiz1/cmp_luasnip',
         'chrisgrieser/cmp-nerdfont',
         'rafamadriz/friendly-snippets',
+        'echasnovski/mini.pairs',
     },
     'lewis6991/gitsigns.nvim',
     'tpope/vim-fugitive',

@@ -18,4 +18,5 @@ require('core.configs.git')
 
 -- Code awareness
 require('core.configs.mason')
+--require('core.configs.linter')
 require('core.configs.completions')

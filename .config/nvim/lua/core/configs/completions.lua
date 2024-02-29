@@ -1,6 +1,7 @@
 local luasnip = require 'luasnip'
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("mini.pairs").setup()
 
 local cmp = require 'cmp'
 
@@ -44,6 +45,7 @@ cmp.setup {
   }),
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'buffer' },
     { name = 'luasnip' },
     { name = 'nerdfont' },
     { name = 'nvim_lua' },
