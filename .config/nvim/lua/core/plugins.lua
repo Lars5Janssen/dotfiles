@@ -15,6 +15,16 @@ require('lazy').setup({
     'nvim-lua/plenary.nvim',
     { 'catppuccin/nvim', name = "catppuccin", priority = 1000 },
     'nvim-tree/nvim-tree.lua',
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        }
+    },
 	'nvim-tree/nvim-web-devicons',
     'ThePrimeagen/harpoon',
     'nvim-lualine/lualine.nvim',
@@ -27,7 +37,7 @@ require('lazy').setup({
     {'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' }},
     'mfussenegger/nvim-lint',
     {
-        'mfussenegger/nvim-jdtls',
+        'mfussenegger/nvim-jdtls', -- TODO update jdtls to newer snapshot
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',

@@ -10,7 +10,7 @@ require('core.configs.treesitter')
 require('core.configs.lualine')
 require('core.configs.telescope')
 require('core.configs.harpoon')
-require('core.configs.nvim-tree')
+require('core.configs.neo-tree')
 require('core.configs.undotree')
 
 -- git
