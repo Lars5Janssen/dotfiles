@@ -19,6 +19,7 @@ exec nitrogen --restore
 bindsym $mod+Control+g exec setxkbmap de
 bindsym $mod+Control+e exec setxkbmap us
 
+# More setup
 # Focuse does not follow mouse
 focus_follows_mouse no
 
@@ -153,6 +154,16 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace $ws1 output eDP-1
+workspace $ws10 output eDP-1
+assign [class="Spotify"] $ws10
+assign [class="^privat.kdbx [Locked] - KeePassXC$"] $ws10
+assign [class="Signal"] $ws10
+exec spotify
+exec signal
+exec keepassxc
+
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
