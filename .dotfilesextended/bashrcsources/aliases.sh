@@ -1,3 +1,4 @@
+alias sudo='sudo '
 # ls alias
 alias l='ls --color -l'
 alias la='l -A'
@@ -8,8 +9,8 @@ alias lock='loginctl lock-session'
 alias sus='systemctl suspend'
 
 # package managers
-alias spm='sudo pacman'
-
+alias pacman='~/.dotfilesextended/scripts/pacnanny/pacnanny'
+alias pm='pacman'
 # starting wm & de
 alias h='Hyprland'
 alias hypr='Hyprland'
@@ -29,11 +30,11 @@ alias restow='todotdir && stow -R . && cd -'
 alias dotpush='todotdir && git status && git commit -a && git push && cd -'
 alias dotstatus='todotdir && git status && cd -'
 alias dotaddall='todotdir && git add . && cd -'
-alias realias='source ~/bashrcsources/aliases.sh'
+alias realias='source ~/.dotfilesextended/bashrcsources/aliases.sh'
 
 # edits for conf files
 alias editb='nvim ~/.bashrc'
-alias edita='nvim ~/bashrcsources/aliases.sh && realias'
+alias edita='nvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
 alias edits='nvim ~/.config/starship.toml'
 alias editi3='nvim ~/.config/i3/config'
 alias edital='nvim ~/.config/alacritty/alacritty.toml'
