@@ -1,4 +1,5 @@
 alias sudo='sudo '
+
 # ls alias
 alias l='ls --color -l'
 alias la='l -A'
@@ -12,6 +13,7 @@ alias off='shutdown 0'
 # package managers
 alias pacman='~/.dotfilesextended/scripts/pacnanny/pacnanny'
 alias pm='pacman'
+
 # starting wm & de
 alias h='Hyprland'
 alias hypr='Hyprland'
