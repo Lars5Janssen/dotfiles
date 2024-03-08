@@ -32,6 +32,7 @@ alias dotpush='todotdir && git status && git commit -a && git push && cd -'
 alias dotstatus='todotdir && git status && cd -'
 alias dotaddall='todotdir && git add . && cd -'
 alias realias='source ~/.dotfilesextended/bashrcsources/aliases.sh'
+alias updatedotfiles='cd ~/dotfiles && stow -D . && git pull && stow . && cd -'
 
 # edits for conf files
 alias editb='nvim ~/.bashrc'
