@@ -1,4 +1,4 @@
-for FILE in ~/bashrcsources/*; do
+for FILE in ~/.dotfilesextended/bashrcsources/*; do
 	source $FILE
 done
 
