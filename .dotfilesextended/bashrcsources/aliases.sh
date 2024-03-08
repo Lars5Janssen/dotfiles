@@ -7,6 +7,7 @@ alias lt='tree'
 # system controll
 alias lock='loginctl lock-session'
 alias sus='systemctl suspend'
+alias off='shutdown 0'
 
 # package managers
 alias pacman='~/.dotfilesextended/scripts/pacnanny/pacnanny'
