@@ -7,6 +7,13 @@ alias lt='tree'
 alias lock='loginctl lock-session'
 alias sus='systemctl suspend'
 
+# package managers
+alias spm='sudo pacman'
+
+# starting wm & de
+alias h='Hyprland'
+alias hypr='Hyprland'
+
 # git
 alias gs='git status'
 alias ga='git add'
@@ -30,6 +37,7 @@ alias edita='nvim ~/bashrcsources/aliases.sh && realias'
 alias edits='nvim ~/.config/starship.toml'
 alias editi3='nvim ~/.config/i3/config'
 alias edital='nvim ~/.config/alacritty/alacritty.toml'
+alias edith='nvim ~/.config/hypr/hyprland.conf'
 
 # ranger gotos
 alias gotodotfiles='ranger ~/dotfiles/'
@@ -40,6 +48,8 @@ alias reloadwaybar='killall waybar && waybar --config ~/.config/waybar/config'
 
 # audio
 alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
+alias listsinks='pactl list short sinks'
+alias setdefsink='pactl set-default-sink'
 
 # display
 alias setlaporientation='xrandr --output DP-2 --left-of eDP-1'
