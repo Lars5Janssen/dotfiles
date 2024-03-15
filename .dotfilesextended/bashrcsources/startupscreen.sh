@@ -1,1 +1,1 @@
-fastfetch --config neofetch --logo-type small
+#fastfetch --config neofetch --logo-type small
