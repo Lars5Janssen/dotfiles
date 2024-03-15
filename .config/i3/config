@@ -33,6 +33,7 @@ bindsym $mod+Control+Shift+p exec polybar-msg cmd quit
 # Move Workspaces over Monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
+bindsym $mod+equal exec playerctl play-pause
 
 # Screenshot
 bindsym Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
