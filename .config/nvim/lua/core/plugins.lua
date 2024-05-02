@@ -42,6 +42,7 @@ require('lazy').setup({
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
     },
+    'mfussenegger/nvim-dap',
     'mbbill/undotree',
     -- lazy.nvim
     {
