@@ -6,7 +6,7 @@ return {
 
     lint.linters_by_ft = {
         Lua = { "luacheck" },
-        markdown = { "woke" }
+        markdown = { "woke", "write_good", }
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
