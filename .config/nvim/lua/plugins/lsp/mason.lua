@@ -32,6 +32,8 @@ return {
 				"jdtls",
 				"google-java-format",
 				"woke",
+				"prettier",
+				"prettierd",
 				"beautysh",
 				"rustfmt",
 				"yamlfix",
