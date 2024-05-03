@@ -1,4 +1,6 @@
 alias sudo='sudo '
+alias openFileWithNvim='~/.dotfilesextended/scripts/opennvim/openrightdir.sh'
+alias openDirWithNvim='~/.dotfilesextended/scripts/opennvim/opendir.sh'
 
 # ls alias
 alias l='ls --color -l'
@@ -37,12 +39,13 @@ alias realias='source ~/.dotfilesextended/bashrcsources/aliases.sh'
 alias updatedotfiles='cd ~/dotfiles && stow -D . && git pull && stow . && cd -'
 
 # edits for conf files
-alias editb='nvim ~/.bashrc'
-alias edita='nvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
-alias edits='nvim ~/.config/starship.toml'
-alias editi3='nvim ~/.config/i3/config'
-alias edital='nvim ~/.config/alacritty/alacritty.toml'
-alias edith='nvim ~/.config/hypr/hyprland.conf'
+alias editbr='openDirWithNvim ~/.dotfilesextended/bashrcsources/'
+alias editn='openDirWithNvim ~/.config/nvim/'
+
+alias edita='openFileWithNvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
+alias edits='openFileWithNvim ~/.config/starship.toml'
+alias edital='openFileWithNvim ~/.config/alacritty/alacritty.toml'
+alias edith='openFileWithNvim ~/.config/hypr/hyprland.conf'
 
 # ranger gotos
 alias gotodotfiles='ranger ~/dotfiles/'
