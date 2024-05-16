@@ -38,6 +38,8 @@ return {
 				"rustfmt",
 				"yamlfix",
 				"taplo",
+				"cssls",
+				"jsonls",
 			},
 		})
 	end,

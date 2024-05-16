@@ -62,7 +62,7 @@ alias gotodotfiles='ranger ~/dotfiles/'
 alias gotodotconfig='ranger ~/dotfiles/.config/'
 
 # reload waybar
-alias reloadwaybar='killall waybar && waybar --config ~/.config/waybar/config'
+alias reloadwaybar='~/.config/waybar/reloadWaybar.sh'
 
 # audio
 alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
