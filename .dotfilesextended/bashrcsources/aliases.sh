@@ -53,10 +53,11 @@ alias rndRenamePicsFromPhone='moveFromePhone && randomRename && moveToPhone'
 alias editbr='openDirWithNvim ~/.dotfilesextended/bashrcsources/'
 alias editn='openDirWithNvim ~/.config/nvim/'
 
-alias edita='openFileWithNvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
-alias edits='openFileWithNvim ~/.config/starship.toml'
-alias edital='openFileWithNvim ~/.config/alacritty/alacritty.toml'
-alias edith='openFileWithNvim ~/.config/hypr/hyprland.conf'
+alias editaa='openFileWithNvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
+alias editss='openFileWithNvim ~/.config/starship.toml'
+alias editac='openFileWithNvim ~/.config/alacritty/alacritty.toml'
+alias edithl='openFileWithNvim ~/.config/hypr/hyprland.conf'
+alias editwb='openFileWithNvim ~/.config/waybar/config.jsonc'
 
 # ranger gotos
 alias gotodotfiles='ranger ~/dotfiles/'
