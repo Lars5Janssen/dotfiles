@@ -8,6 +8,7 @@ alias la='l -A'
 alias lt='tree'
 
 # system controll
+alias srb='systemctl soft-reboot'
 alias lock='loginctl lock-session'
 alias sus='systemctl suspend'
 alias off='shutdown 0'

@@ -2,11 +2,11 @@ palette = "catppuccin_mocha"
 
 add_newline = true
 
+#$username\
 format = """
 $line_break\
 [](mauve)\
 $os\
-$username\
 $directory\
 [](fg:mauve bg:pink)\
 $git_branch\
@@ -55,7 +55,7 @@ format = '[ $symbol $context ]($style) $path'
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
+time_format = "%R"           # Hour:Minute Format
 style = "fg:base bg:mauve"
 format = '[ $time ]($style)'
 
