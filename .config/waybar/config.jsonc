@@ -60,7 +60,7 @@
         "format": "{name}"
     },
     "clock#1": {
-        "format": "{:%a}",
+        "format": "{:%A}",
         "tooltip": false
     },
     "clock#2": {
@@ -68,7 +68,7 @@
         "tooltip": false
     },
     "clock#3": {
-        "format": "{:%d-%m}",
+        "format": "{:%d-%m} ",
         "tooltip": false
     },
     "pulseaudio#1": {
@@ -92,15 +92,18 @@
         "format-source": " {volume}%",
         "format-source-muted": "    ",
         "scroll-step": 5,
+        "tooltip": false,
         "on-click": "~/.config/waybar/muteMic.sh"
     },
     "memory": {
         "interval": 5,
-        "format": "Mem {}%"
+        "format": "Mem {}%",
+        "on-click": "alacritty -e btop"
     },
     "cpu": {
         "interval": 5,
-        "format": "CPU {usage:2}%"
+        "format": "CPU {usage:2}%",
+        "on-click": "alacritty -e btop"
     },
     "battery": {
         "states": {
@@ -115,12 +118,14 @@
             "",
             "",
             ""
-        ]
+        ],
+        "on-click": "alacritty -e btop"
     },
     "disk": {
         "interval": 5,
         "format": "Disk {percentage_used:2}%",
-        "path": "/"
+        "path": "/",
+        "on-click": "alacritty -e btop"
     },
     "tray": {
         "icon-size": 20
