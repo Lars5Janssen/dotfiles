@@ -3,8 +3,8 @@ alias openFileWithNvim='~/.dotfilesextended/scripts/opennvim/openrightdir.sh'
 alias openDirWithNvim='~/.dotfilesextended/scripts/opennvim/opendir.sh'
 
 # ls alias
-alias l='ls --color -l'
-alias la='l -A'
+alias l='ls --color -lA'
+alias la='l -Al'
 alias lt='tree'
 
 # system controll
