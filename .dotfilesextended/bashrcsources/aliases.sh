@@ -20,6 +20,7 @@ alias pm='pacman'
 # starting wm & de
 alias h='Hyprland'
 alias hypr='Hyprland'
+alias sw='swww kill && swww init && swww img ~/Pictures/irithyll.png'
 
 # git
 alias gs='git status'
