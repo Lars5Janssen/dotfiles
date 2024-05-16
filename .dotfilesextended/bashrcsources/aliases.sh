@@ -1,4 +1,6 @@
 alias sudo='sudo '
+alias openFileWithNvim='~/.dotfilesextended/scripts/opennvim/openrightdir.sh'
+alias openDirWithNvim='~/.dotfilesextended/scripts/opennvim/opendir.sh'
 
 # ls alias
 alias l='ls --color -l'
@@ -6,6 +8,7 @@ alias la='l -A'
 alias lt='tree'
 
 # system controll
+alias srb='systemctl soft-reboot'
 alias lock='loginctl lock-session'
 alias sus='systemctl suspend'
 alias off='shutdown 0'
@@ -46,12 +49,13 @@ alias randomRename='cd ~/Projects/rndrename/ && fdupes -dN ./source/ && useRNDRE
 alias rndRenamePicsFromPhone='moveFromePhone && randomRename && moveToPhone'
 
 # edits for conf files
-alias editb='nvim ~/.bashrc'
-alias edita='nvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
-alias edits='nvim ~/.config/starship.toml'
-alias editi3='nvim ~/.config/i3/config'
-alias edital='nvim ~/.config/alacritty/alacritty.toml'
-alias edith='nvim ~/.config/hypr/hyprland.conf'
+alias editbr='openDirWithNvim ~/.dotfilesextended/bashrcsources/'
+alias editn='openDirWithNvim ~/.config/nvim/'
+
+alias edita='openFileWithNvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
+alias edits='openFileWithNvim ~/.config/starship.toml'
+alias edital='openFileWithNvim ~/.config/alacritty/alacritty.toml'
+alias edith='openFileWithNvim ~/.config/hypr/hyprland.conf'
 
 # ranger gotos
 alias gotodotfiles='ranger ~/dotfiles/'
