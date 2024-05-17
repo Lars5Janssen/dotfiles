@@ -1,6 +1,7 @@
 alias sudo='sudo '
 alias openFileWithNvim='~/.dotfilesextended/scripts/opennvim/openrightdir.sh'
 alias openDirWithNvim='~/.dotfilesextended/scripts/opennvim/opendir.sh'
+alias o='xdg-open'
 
 # ls alias
 alias l='ls --color -lA'
@@ -57,7 +58,7 @@ alias editaa='openFileWithNvim ~/.dotfilesextended/bashrcsources/aliases.sh && r
 alias editss='openFileWithNvim ~/.config/starship.toml'
 alias editac='openFileWithNvim ~/.config/alacritty/alacritty.toml'
 alias edithl='openFileWithNvim ~/.config/hypr/hyprland.conf'
-alias editwb='openFileWithNvim ~/.config/waybar/config.jsonc'
+alias editwb='openFileWithNvim ~/.config/waybar/config.jsonc && reloadwaybar'
 
 # ranger gotos
 alias gotodotfiles='ranger ~/dotfiles/'
