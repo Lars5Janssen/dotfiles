@@ -1,0 +1,22 @@
+sort=-time
+max-history=5
+max-visible=5
+default-timeout=5000
+layer=top
+anchor=top-right
+text-alignment=center
+on-button-left=invoke-default-action
+on-button-right=dismiss-group
+on-touch=dismiss
+on-notify=none
+font=MesloLGS Nerd Font Mono
+
+# Colors
+
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#89b4fa
+progress-color=over #313244
+
+[urgency=high]
+border-color=#f38ba8
