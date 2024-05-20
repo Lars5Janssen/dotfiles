@@ -1,8 +1,8 @@
 @import 'mocha.css';
 
 * {
-    font-size: 20px;
-    font-family: monospace;
+    font-size: 25px;
+    font-family: MesloLGS Nerd Font Mono;
 }
 
 window#waybar {
