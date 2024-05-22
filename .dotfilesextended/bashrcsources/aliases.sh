@@ -17,6 +17,8 @@ alias off='shutdown 0'
 # package managers
 alias pacman='~/.dotfilesextended/scripts/pacnanny/pacnanny'
 alias pm='pacman'
+alias rmvOrphans='pacman -Qdtq | sudo pacman -Rns -'
+alias browsePackages="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)"
 
 # starting wm & de
 alias h='Hyprland'
