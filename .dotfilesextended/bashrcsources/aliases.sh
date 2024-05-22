@@ -42,13 +42,9 @@ alias realias='source ~/.dotfilesextended/bashrcsources/aliases.sh'
 alias updatedotfiles='cd ~/dotfiles && stow -D . && git pull && stow . && cd -'
 
 # Rename pic
-alias moveFromePhone='mv /run/user/1000/gvfs/mtp\:host\=Google_Pixel_6_1B131FDF6009GQ/Internal\ shared\ storage/Download/* ~/Projects/rndrename/source/ | pv -lep -s $(ls -1 /run/user/1000/gvfs/mtp\:host\=Google_Pixel_6_1B131FDF6009GQ/Internal\ shared\ storage/Download/ | wc -l) > /dev/null'
-alias moveToPhone='mv ~/Projects/rndrename/source/* /run/user/1000/gvfs/mtp\:host\=Google_Pixel_6_1B131FDF6009GQ/Internal\ shared\ storage/Download/ | pv -lep -s $(ls -1 ~/Projects/rndrename/source/ | wc -l) > /dev/null'
-
+alias moveAndRename='android-file-transfer && randomRename && android-file-transfer'
 alias useRNDRENAME='./rndRename.sh source/ && ./rndRename.sh source/ && ./rndRename.sh source/'
 alias randomRename='cd ~/Projects/rndrename/ && fdupes -dN ./source/ && useRNDRENAME && useRNDRENAME && cd -'
-
-alias rndRenamePicsFromPhone='moveFromePhone && randomRename && moveToPhone'
 
 # edits for conf files
 alias editbr='openDirWithNvim ~/.dotfilesextended/bashrcsources/'
