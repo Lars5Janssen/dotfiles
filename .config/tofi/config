@@ -1,3 +1,10 @@
 font = "~/.fonts/MesloLGSNerdFontMono-Regular.ttf"
 font-size= 24
 
+# Catppuccin Mocha
+text-color = #cdd6f4
+prompt-color = #cba6f7
+border-color = #cba6f7
+border-width = 3
+selection-color = #f9e2af
+background-color = #1e1e2e
