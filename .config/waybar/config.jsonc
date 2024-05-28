@@ -132,6 +132,8 @@
             "󰃟",
             "󰃠"
         ],
+        "on-scroll-up": "~/.dotfilesextended/scripts/smoothBrightnessScrolling.sh 10000+",
+        "on-scroll-down": "~/.dotfilesextended/scripts/smoothBrightnessScrolling.sh 10000-",
         "on-click": "~/.dotfilesextended/scripts/toggleKbBacklight.sh"
     },
     "disk": {
