@@ -125,7 +125,14 @@
         "on-click": "alacritty -e btop"
     },
     "backlight": {
-        "on-click": "~/.dotfilesextended/scripts/toggleKbBacklight.sh",
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰃞",
+            "󰃝",
+            "󰃟",
+            "󰃠"
+        ],
+        "on-click": "~/.dotfilesextended/scripts/toggleKbBacklight.sh"
     },
     "disk": {
         "interval": 5,

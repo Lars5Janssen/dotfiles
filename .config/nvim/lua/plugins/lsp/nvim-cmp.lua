@@ -6,6 +6,7 @@ return {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"L3MON4D3/LuaSnip",
+		"chrisgreiser/cmp-nerdfont",
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
@@ -41,6 +42,7 @@ return {
 				{ name = "luasnip", keyword_length = 2 },
 				{ name = "buffer", keyword_length = 3 },
 				{ name = "path" },
+				{ name = "nerdfont" },
 			}),
 			formatting = {
 				format = lspkind.cmp_format({
