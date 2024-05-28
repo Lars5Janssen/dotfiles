@@ -63,6 +63,11 @@ alias edittf='n ~/.config/tofi/config'
 alias gotodotfiles='ranger ~/dotfiles/'
 alias gotodotconfig='ranger ~/dotfiles/.config/'
 
+# brightnessctl
+alias kbBacklightToggle='~/.dotfilesextended/scripts/toggleKbBacklight.sh'
+alias displayBrightness='brightnessctl set'
+alias bctl='brightnessctl'
+
 # reload waybar
 alias reloadwaybar='~/.config/waybar/reloadWaybar.sh'
 
@@ -70,9 +75,6 @@ alias reloadwaybar='~/.config/waybar/reloadWaybar.sh'
 alias setBtAudio="pactl set-default-sink \$(pactl list short sinks | tail -n1 | cut -d'b' -f1)"
 alias listsinks='pactl list short sinks'
 alias setdefsink='pactl set-default-sink'
-
-# display
-alias setlaporientation='xrandr --output DP-2 --left-of eDP-1'
 
 # Wifi
 alias wificon='nmtui-connect'

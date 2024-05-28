@@ -12,6 +12,9 @@
         "battery",
         "custom/right-arrow-dark",
         "custom/right-arrow-light",
+        "backlight",
+        "custom/right-arrow-dark",
+        "custom/right-arrow-light",
         "pulseaudio#2",
         "custom/right-arrow-dark"
     ],
@@ -120,6 +123,9 @@
             ""
         ],
         "on-click": "alacritty -e btop"
+    },
+    "backlight": {
+        "on-click": "~/.dotfilesextended/scripts/toggleKbBacklight.sh",
     },
     "disk": {
         "interval": 5,
