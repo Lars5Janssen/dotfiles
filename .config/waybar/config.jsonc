@@ -87,8 +87,8 @@
             ]
         },
         "scroll-step": 5,
-        "on-click-right": "pamixer -t",
-        "on-click": "pavucontrol"
+        "on-click-right": "pavucontrol",
+        "on-click": "pamixer -t"
     },
     "pulseaudio#2": {
         "format": "{format_source}",
