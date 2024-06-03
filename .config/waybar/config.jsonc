@@ -12,9 +12,6 @@
         "battery",
         "custom/right-arrow-dark",
         "custom/right-arrow-light",
-        "backlight",
-        "custom/right-arrow-dark",
-        "custom/right-arrow-light",
         "pulseaudio#2",
         "custom/right-arrow-dark"
     ],
@@ -32,6 +29,9 @@
     "modules-right": [
         "custom/left-arrow-dark",
         "pulseaudio#1",
+        "custom/left-arrow-light",
+        "custom/left-arrow-dark",
+        "backlight",
         "custom/left-arrow-light",
         "custom/left-arrow-dark",
         "cpu",
