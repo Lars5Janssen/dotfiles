@@ -58,6 +58,7 @@ alias editac='openFileWithNvim ~/.config/alacritty/alacritty.toml'
 alias edithl='openFileWithNvim ~/.config/hypr/hyprland.conf'
 alias editwb='openFileWithNvim ~/.config/waybar/config.jsonc && reloadwaybar'
 alias edittf='n ~/.config/tofi/config'
+alias editmk='n ~/.config/mako/config && makoctl reload'
 
 # ranger gotos
 alias gotodotfiles='ranger ~/dotfiles/'
