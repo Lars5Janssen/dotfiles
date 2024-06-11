@@ -26,13 +26,14 @@ alias hypr='Hyprland'
 alias sw='swww kill && swww init && swww img ~/Pictures/irithyll.png'
 
 # git
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias gcp='git commit && git push'
-alias gcap='git commit -a && git push'
-alias gaacp='git add . && git commit -a && git push'
+alias g='git'
+#alias gs='git status'
+#alias ga='git add'
+#alias gc='git commit'
+#alias gp='git push'
+#alias gcp='git commit && git push'
+#alias gcap='git commit -a && git push'
+#alias gaacp='git add . && git commit -a && git push'
 
 # ~/dotfiles/ related aliases
 alias todotdir='cd ~/dotfiles'
@@ -83,7 +84,8 @@ alias obwifi='nmtui-connect Osterberg'
 
 # uncategorized aliases
 alias n='nvim'
-alias r='ranger'
+alias r='nnn'
+alias nn='nnn'
 
 alias checkbat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias gay='lolcat'

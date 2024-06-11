@@ -1,0 +1,19 @@
+[user]
+	email = lars.e.janssen@gmail.com
+	name = Lars Janssen
+
+[alias]
+    s = status -s
+    st = status
+    conf = config --global --edit
+    ci = commit
+    co = checkout
+    discardUnAdded = checkout .
+    unstash = stash pop
+    aa = add -A
+    cdf = cleand -df
+    pr = pull --rebase
+    br = branch
+    bra = branch -a
+    amend = commit -a --amend --no-edit
+
