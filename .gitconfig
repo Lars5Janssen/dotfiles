@@ -2,6 +2,9 @@
 	email = lars.e.janssen@gmail.com
 	name = Lars Janssen
 
+[init]
+    defaultBranch = main
+
 [alias]
     s = status -s
     st = status
@@ -17,3 +20,18 @@
     bra = branch -a
     amend = commit -a --amend --no-edit
 
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    side-by-side = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
