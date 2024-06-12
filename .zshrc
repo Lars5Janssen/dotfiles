@@ -80,4 +80,4 @@ alias vim='nvim'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/ohmyposh.toml)"
