@@ -21,6 +21,7 @@ zinit light Aloxaf/fzf-tab
 
 # Add in snippets
 zinit snippet OMZP::git
+zinit snippet OMZP::tldr
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
@@ -33,7 +34,6 @@ zinit cdreplay -q
 #eval "$(starship init zsh)"
 
 # Hotkeys
-#bindkey -a
 bindkey '^f' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
