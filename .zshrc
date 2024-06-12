@@ -7,7 +7,6 @@ TMUX_TPM_HOME="${HOME}/.tmux/plugins/tpm/"
 # Download zinit, if it's not there yet
 [ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d "$ZINIT_HOME"/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-#[ ! -d "$TMUX_TPM_HOME" ] && mkdir -p "$(dirname $TMUX_TPM_HOME/tpm)"
 [ ! -d "$TMUX_TPM_HOME"/.git ] && git clone https://github.com/tmux-plugins/tpm "$TMUX_TPM_HOME"
 
 # Source zinit file
@@ -29,9 +28,6 @@ zinit snippet OMZP::command-not-found
 # Load completions
 autoload -U compinit && compinit
 zinit cdreplay -q
-
-# Enable starship
-#eval "$(starship init zsh)"
 
 # Hotkeys
 bindkey '^f' autosuggest-accept
@@ -72,6 +68,7 @@ alias ls='ls --color'
 alias l='ls -lA --color'
 alias editzsh='nvim ~/.zshrc && source ~/.zshrc'
 alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
+alias edithl='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -' 
 alias resource='source ~/.zshrc'
 alias restow='cd ~/dotfiles/ && stow . && cd -'
 alias n='nvim'
