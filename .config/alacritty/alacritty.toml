@@ -1,6 +1,4 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml",
-  ]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -10,7 +8,7 @@ TERM = "xterm-256color"
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
-size = 14 
+size = 24
 
 [scrolling]
 history = 10000
@@ -25,19 +23,19 @@ y = 5
 
 [keyboard]
 bindings = [
-  { key = "R", mods = "Control|Shift", action = "ResetFontSize"},
-  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
-  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
-  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
-  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
-  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
-  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
-  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize"},
-  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
-  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
-  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
-  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
-  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
-  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
-  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize"},
-  ]
+  { key = "R", mods = "Control|Shift", action = "ResetFontSize" },
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
+  { key = "_", mods = "Control|Shift", action = "DecreaseFontSize" },
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "+", mods = "Control|Shift", action = "IncreaseFontSize" },
+]

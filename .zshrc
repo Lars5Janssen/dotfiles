@@ -71,6 +71,10 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
+alias l='ls -lA --color'
+alias editzsh='nvim ~/.zshrc && source ~/.zshrc'
+alias resource='source ~/.zshrc'
+alias restow='cd ~/dotfiles/ && stow . && cd -'
 
 # Shell integrations
 eval "$(fzf --zsh)"
