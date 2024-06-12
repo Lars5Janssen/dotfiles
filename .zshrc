@@ -77,6 +77,8 @@ alias restow='cd ~/dotfiles/ && stow . && cd -'
 alias n='nvim'
 alias vi='nvim'
 alias vim='nvim'
+alias t='tmux new-session -A -s main'
+alias tls='tmux ls'
 
 # Shell integrations
 eval "$(fzf --zsh)"
