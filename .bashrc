@@ -1,5 +1,3 @@
-hyfetch
-
 for FILE in ~/.dotfilesextended/bashrcsources/*; do
 	source $FILE
 done
