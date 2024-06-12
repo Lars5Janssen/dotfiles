@@ -76,6 +76,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias t='tmux new-session -A -s main'
 alias tls='tmux ls'
+alias sus='systemctl suspend'
 
 # Shell integrations
 eval "$(fzf --zsh)"
