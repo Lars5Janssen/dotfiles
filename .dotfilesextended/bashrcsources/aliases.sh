@@ -2,6 +2,7 @@ alias sudo='sudo '
 alias openFileWithNvim='~/.dotfilesextended/scripts/opennvim/openrightdir.sh'
 alias openDirWithNvim='~/.dotfilesextended/scripts/opennvim/opendir.sh'
 alias o='xdg-open'
+alias open='xdg-open'
 
 # ls alias
 alias l='ls --color -lA'
@@ -52,7 +53,7 @@ alias randomRename='cd ~/Projects/rndrename/ && fdupes -dN ./source/ && useRNDRE
 # edits for conf files
 alias editbr='openDirWithNvim ~/.dotfilesextended/bashrcsources/'
 alias editn='openDirWithNvim ~/.config/nvim/'
-
+alias editdf='openDirWithNvim ~/dotfiles/ && restow'
 alias editaa='openFileWithNvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
 alias editss='openFileWithNvim ~/.config/starship.toml'
 alias editac='openFileWithNvim ~/.config/alacritty/alacritty.toml'
