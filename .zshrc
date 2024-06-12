@@ -10,10 +10,13 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # Zinit
 # Set directory for zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+TMUX_TPM_HOME="${HOME}/.tmux/plugins/tpm/"
 
 # Download zinit, if it's not there yet
 [ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d "$ZINIT_HOME"/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+#[ ! -d "$TMUX_TPM_HOME" ] && mkdir -p "$(dirname $TMUX_TPM_HOME/tpm)"
+[ ! -d "$TMUX_TPM_HOME"/.git ] && git clone https://github.com/tmux-plugins/tpm "$TMUX_TPM_HOME"
 
 # Source zinit file
 source "${ZINIT_HOME}/zinit.zsh"
@@ -48,6 +51,14 @@ zinit cdreplay -q
 bindkey '^f' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey '^o' clear_screen
+zle -N clear_screen
+    
+function clear_screen ()
+{
+    zle clear-screen
+    zle reset-prompt
+}
 
 # History
 HISTSIZE=5000
@@ -70,11 +81,16 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath' 
 
 # Aliases
+alias c='clear'
 alias ls='ls --color'
 alias l='ls -lA --color'
 alias editzsh='nvim ~/.zshrc && source ~/.zshrc'
+alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
 alias resource='source ~/.zshrc'
 alias restow='cd ~/dotfiles/ && stow . && cd -'
+alias n='nvim'
+alias vi='nvim'
+alias vim='nvim'
 
 # Shell integrations
 eval "$(fzf --zsh)"
