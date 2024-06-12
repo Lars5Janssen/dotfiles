@@ -38,7 +38,7 @@ style = 'accordion'
 powerline_symbol = ''
 foreground = 'p:crust'
 background = 'p:text'
-template = "{{ if .Working.Changed }}  {{ .Working.String }}{{ end }} "
+template = "{{ if .Working.Changed }} 󰏫 {{ .Working.String }}{{ end }} "
 
 
 [blocks.segments.properties]
@@ -51,7 +51,7 @@ powerline_symbol = ''
 invert_powerline = true
 foreground = 'p:crust'
 background = 'p:pink'
-template = '{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}'
+template = '{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}'
 
 [blocks.segments.properties]
 fetch_status = true
