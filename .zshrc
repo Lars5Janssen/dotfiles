@@ -77,6 +77,8 @@ alias vim='nvim'
 alias t='tmux new-session -A -s main'
 alias tls='tmux ls'
 alias sus='systemctl suspend'
+alias srb='systemctl soft-reboot'
+alias h='Hyprland'
 
 # Shell integrations
 eval "$(fzf --zsh)"
