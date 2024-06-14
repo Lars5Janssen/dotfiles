@@ -79,7 +79,8 @@ alias tls='tmux ls'
 alias sus='systemctl suspend'
 alias srb='systemctl soft-reboot'
 alias h='Hyprland'
-alias d='BROWSER=w3m ddgr'
+alias b='lynx -cfg=~/.config/lynx/lynx.cfg'
+alias d='BROWSER=lynx -cfg=~/.config/lynx/lynx.cfg ddgr --reverse'
 
 # Shell integrations
 eval "$(fzf --zsh)"
