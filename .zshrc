@@ -79,6 +79,7 @@ alias tls='tmux ls'
 alias sus='systemctl suspend'
 alias srb='systemctl soft-reboot'
 alias h='Hyprland'
+alias d='BROWSER=w3m ddgr'
 
 # Shell integrations
 eval "$(fzf --zsh)"
