@@ -28,13 +28,13 @@ alias sw='swww kill && swww init && swww img ~/Pictures/irithyll.png'
 
 # git
 alias g='git'
-#alias gs='git status'
-#alias ga='git add'
-#alias gc='git commit'
-#alias gp='git push'
-#alias gcp='git commit && git push'
-#alias gcap='git commit -a && git push'
-#alias gaacp='git add . && git commit -a && git push'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gcp='git commit && git push'
+alias gcap='git commit -a && git push'
+alias gaacp='git add . && git commit -a && git push'
 
 # ~/dotfiles/ related aliases
 alias todotdir='cd ~/dotfiles'
