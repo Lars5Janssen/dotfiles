@@ -46,7 +46,7 @@ foreground_templates = [
 #  "{{ if eq .Working.Changed true }}p:red{{ end }}",
 #  "{{ if eq .Working.Changed false }}p:red{{ end }}",
 #]
-template = "{{ if .Working.Changed }} 󰏫 {{ .Working.String }}{{ end }}{{ if eq .Working.Changed false }}--{{ end }}"
+template = "{{ if .Working.Changed }} 󰏫 {{ .Working.String }}{{ end }}{{ if eq .Working.Changed false }}-{{ end }}"
 
 
 [blocks.segments.properties]
