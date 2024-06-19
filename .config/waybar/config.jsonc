@@ -87,7 +87,7 @@
             ]
         },
         "scroll-step": 5,
-        "on-click": "pavucontrol",
+        "on-click": "pavucontrol &>/dev/null",
         "on-click-right": "pamixer -t"
     },
     "pulseaudio#2": {
