@@ -55,7 +55,11 @@ powerline_symbol = ''
 invert_powerline = true
 foreground = 'p:crust'
 background = 'p:pink'
-template = '{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}'
+foreground_templates = [
+  "{{if .Staging.Changed}}p:crust{{end}}",
+  "{{if eq .Staging.Changed false}}p:pink{{end}}",
+]
+template = '{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if eq .Staging.Changed false }}-{{ end }}'
 
 [blocks.segments.properties]
 fetch_status = true
