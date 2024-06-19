@@ -34,7 +34,7 @@ fetch_status = true
 
 [[blocks.segments]]
 type = 'git'
-style = 'accordion'
+style = 'powerline'
 powerline_symbol = ''
 foreground = 'p:crust'
 background = 'p:text'
@@ -42,10 +42,6 @@ foreground_templates = [
   "{{if .Working.Changed}}p:crust{{end}}",
   "{{if eq .Working.Changed false}}p:text{{end}}",
 ]
-#foreground_template = [
-#  "{{ if eq .Working.Changed true }}p:red{{ end }}",
-#  "{{ if eq .Working.Changed false }}p:red{{ end }}",
-#]
 template = "{{ if .Working.Changed }} 󰏫 {{ .Working.String }}{{ end }}{{ if eq .Working.Changed false }}-{{ end }}"
 
 
