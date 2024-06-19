@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"L3MON4D3/LuaSnip",
 		"chrisgreiser/cmp-nerdfont",
@@ -38,11 +39,11 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "cmp-nvim-lsp-signature-help" },
-				{ name = "luasnip", keyword_length = 2 },
-				{ name = "buffer", keyword_length = 3 },
-				{ name = "path" },
-				{ name = "nerdfont" },
+				--{ name = "cmp-nvim-lsp-signature-help" },
+				--{ name = "luasnip", keyword_length = 2 },
+				--{ name = "buffer", keyword_length = 3 },
+				--{ name = "path" },
+				--{ name = "nerdfont" },
 			}),
 			formatting = {
 				format = lspkind.cmp_format({
