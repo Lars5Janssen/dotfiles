@@ -42,7 +42,7 @@ foreground_templates = [
   "{{if .Working.Changed}}p:crust{{end}}",
   "{{if eq .Working.Changed false}}p:text{{end}}",
 ]
-template = "{{ if .Working.Changed }} 󰏫 {{ .Working.String }}{{ end }}{{ if eq .Working.Changed false }}-{{ end }}"
+template = "{{ if .Working.Changed }} 󰏫 {{ .Working.String }}{{ end }}{{ if eq .Working.Changed false }}--{{ end }}"
 
 
 [blocks.segments.properties]
