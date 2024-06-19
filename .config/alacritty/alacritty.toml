@@ -8,7 +8,7 @@ TERM = "xterm-256color"
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
-size = 24
+size = 20
 
 [scrolling]
 history = 10000
