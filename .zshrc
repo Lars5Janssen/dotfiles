@@ -64,8 +64,10 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias c='clear'
+alias p='playerctl play-pause'
 alias ls='ls --color'
 alias l='ls -lA --color'
+alias L='ls -l --color'
 alias editzsh='nvim ~/.zshrc && source ~/.zshrc'
 alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
 alias edithl='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -' 
