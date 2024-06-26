@@ -80,7 +80,7 @@ alias sus='systemctl suspend'
 alias srb='systemctl soft-reboot'
 alias h='Hyprland'
 alias b='lynx -cfg=~/.config/lynx/lynx.cfg'
-alias d='BROWSER=lynx -cfg=~/.config/lynx/lynx.cfg ddgr --reverse'
+alias d='BROWSER=w3m ddgr --reverse'
 
 # Shell integrations
 eval "$(fzf --zsh)"
