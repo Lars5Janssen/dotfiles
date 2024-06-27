@@ -51,7 +51,7 @@ alias useRNDRENAME='./rndRename.sh source/ && ./rndRename.sh source/ && ./rndRen
 alias randomRename='cd ~/Projects/rndrename/ && fdupes -dN ./source/ && useRNDRENAME && useRNDRENAME && cd -'
 
 # edits for conf files
-alias editbr='openDirWithNvim ~/.dotfilesextended/bashrcsources/'
+alias edit='nvim ~/.bashrc'
 alias editn='openDirWithNvim ~/.config/nvim/'
 alias editdf='openDirWithNvim ~/dotfiles/ && restow'
 alias editaa='openFileWithNvim ~/.dotfilesextended/bashrcsources/aliases.sh && realias'
