@@ -29,7 +29,6 @@ return {
 				"lua_ls",
 				"luacheck",
 				"stylua",
-				"java_language_server",
 				"google-java-format",
 				"woke",
 				"prettier",

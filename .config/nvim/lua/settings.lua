@@ -15,3 +15,9 @@ vim.opt.updatetime = 50
 vim.opt.expandtab = true
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = "*",
+	callback = function()
+		vim.opt.formatoptions:remove({ "o" })
+	end,
+})
