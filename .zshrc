@@ -67,6 +67,13 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls -A --color $realpath'
 # Aliases
 alias c='clear'
 alias p='playerctl play-pause'
+o() {
+    if git config --get remote.origin.url > /dev/null ; then
+        xdg-open $(git config --get remote.origin.url | sed "s/git@\(.*\):\(.*\).git/https:\/\/\1\/\2\//")
+    else
+        echo "This is not an git repo.."
+    fi
+}
 alias ls='ls --color'
 alias l='ls -lA --color'
 alias L='ls -l --color'

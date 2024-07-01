@@ -134,8 +134,8 @@
             "󰃟",
             "󰃠"
         ],
-        "on-scroll-up": "brightnessctl set +1% -e 3",
-        "on-scroll-down": "brightnessctl set 1%- -e 3",
+        "on-scroll-down": "brightnessctl set +1% -e 3",
+        "on-scroll-up": "brightnessctl set 1%- -e 3",
         "on-click": "~/.dotfilesextended/scripts/toggleKbBacklight.sh"
     },
     "disk": {
