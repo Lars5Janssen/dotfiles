@@ -11,12 +11,16 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
+		"neovim/nvim-lspconfig",
 	},
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
 		require("luasnip.loaders.from_vscode").lazy_load()
+		vim.keymap.set("n", "<leader>ca", function()
+			vim.lsp.buf.code_action({ apply = true })
+		end)
 
 		cmp.setup({
 			completion = {
