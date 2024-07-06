@@ -7,7 +7,7 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				--lua = { "stylua" },
-				java = { "google-java-format" },
+				--java = { "google-java-format" },
 				markdown = { { "prettierd", "prettier" } },
 				bash = { "beautysh" },
 				rust = { "rustfmt" },
@@ -16,7 +16,7 @@ return {
 			},
 			format_on_save = {
 				timeout = 500,
-				lsp_fallback = true,
+				lsp_fallback = false,
 			},
 		})
 
