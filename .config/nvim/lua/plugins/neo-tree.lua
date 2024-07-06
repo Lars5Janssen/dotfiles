@@ -6,9 +6,16 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
 		"3rd/image.nvim",
+		"folke/which-key.nvim",
 	},
 	config = function()
-		vim.keymap.set("n", "<leader>tj", ":Neotree toggle<CR>")
-		vim.keymap.set("n", "<leader>tk", ":Neotree close<CR>")
+        local wk = require("which-key")
+        wk.register({
+            ["<leader>t"] = {
+                name = "+Filetree",
+                j = { ":Neotree focus<CR>", "Open Filetree" },
+                k = { ":Neotree close<CR>", "Close Filetree" },
+            }
+        })
 	end,
 }

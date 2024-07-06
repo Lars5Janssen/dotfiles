@@ -12,16 +12,20 @@ return {
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
 		"neovim/nvim-lspconfig",
+        "folke/which-key.nvim",
 	},
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
+        local wk = require("which-key")
 		require("luasnip.loaders.from_vscode").lazy_load()
-		vim.keymap.set("n", "<leader>ca", function()
-			vim.lsp.buf.code_action({ apply = true })
-		end)
-
+        wk.register({
+            ["<leader>c"] = {
+                name = "+cmp",
+                a = { function() vim.lsp.buf.code_action({ apply = true }) end, "Code actions" },
+            }
+        })
 		cmp.setup({
 			completion = {
 				completeop = "menu,menuone,previe,noselect",

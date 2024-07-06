@@ -1,8 +1,12 @@
 return {
   "mfussenegger/nvim-lint",
+    dependencies = {
+        "folke/which-key.nvim",
+    },
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     local lint = require("lint")
+    local wk = require("which-key")
 
     lint.linters_by_ft = {
         --Lua = { "luacheck" },
@@ -20,8 +24,11 @@ return {
 
 
 
-    vim.keymap.set("n", "<leader>ll", function()
-      lint.try_lint()
-    end, { desc = "Trigger linting for current file" })
+    wk.register({
+        ["<leader>l"] = {
+                name = "+linting",
+                l = { function() lint.try_lint() end, "Trigger linting for current file" },
+            },
+    })
   end,
 }

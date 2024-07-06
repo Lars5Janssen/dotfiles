@@ -1,12 +1,21 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.x",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = {
+        "nvim-lua/plenary.nvim",
+        "folke/which-key.nvim",
+    },
 	config = function()
+        local wk = require("which-key")
 		local builtin = require("telescope.builtin")
-		vim.keymap.set("n", "<leader>ff", builtin.find_files) --help
-		vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-		vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-		vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+        wk.register({
+            ["<leader>f"] = {
+                name = "+telescope",
+                f = { builtin.find_files, "Find files" },
+                g = { builtin.live_grep, "Live grep" },
+                b = { builtin.buffers, "Find in Buffers" },
+                h = { builtin.help_tags, "Help tags" },
+            }
+        })
 	end,
 }
