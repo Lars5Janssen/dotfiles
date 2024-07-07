@@ -1,45 +1,19 @@
 return {
-	"williamboman/mason.nvim",
-	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-	},
-	config = function()
-		local mason = require("mason")
-		local mason_lspconfig = require("mason-lspconfig")
-		local mason_tool_installer = require("mason-tool-installer")
-
-		-- enable mason and configure icons
-		mason.setup({
-			ui = {
-				icons = {
-					package_installed = "✓",
-					package_pending = "➜",
-					package_uninstalled = "✗",
-				},
-			},
-		})
-
-		mason_lspconfig.setup({
-			automatic_installation = true,
-		})
-
-		mason_tool_installer.setup({
-			ensure_installed = {
-				"lua_ls",
-				"luacheck",
-				"stylua",
-				"google-java-format",
-				"woke",
-				"prettier",
-				"prettierd",
-				"beautysh",
-				"rustfmt",
-				"yamlfix",
-				"taplo",
-				"cssls",
-				"jsonls",
-			},
-		})
-	end,
+    {
+        "williamboman/mason.nvim",
+        cmd = { "Mason", "MasonInstall", "MasonUpdate" },
+        config = function(_, opts)
+            require("mason").setup(opts)
+        end,
+    },
+    {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        opts = require "plugins.configs.mason",
+        dependencies = { "williamboman/mason.nvim" },
+        cmd = {
+            "MasonToolsInstall", "MasonToolsInstallSync",
+            "MasonToolsUpdate", "MasonToolsUpdateSync",
+            "MasonToolsClean",
+        }
+    },
 }

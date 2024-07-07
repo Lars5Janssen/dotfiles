@@ -10,7 +10,7 @@ return {
 
         conform.setup({
             formatters_by_ft = {
-                --lua = { "stylua" },
+               lua = { "stylua" },
                 --java = { "google-java-format" },
                 markdown = { { "prettierd", "prettier" } },
                 bash = { "beautysh" },

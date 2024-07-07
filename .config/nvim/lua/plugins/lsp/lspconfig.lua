@@ -1,30 +1,46 @@
 return {
-	"neovim/nvim-lspconfig",
-	event = { "BufReadPre", "BufNewFile" },
-	config = function()
-		-- import lspconfig plugin
-		local lspconfig = require("lspconfig")
+	{
+		"neovim/nvim-lspconfig",
+		lazy = false,
+		config = function()
+			local lspconfig = require("lspconfig")
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-		-- import mason_lspconfig plugin
-		local mason_lspconfig = require("mason-lspconfig")
-
-		mason_lspconfig.setup_handlers({
-			function(server_name) -- default handler (optional)
-				require("lspconfig")[server_name].setup({})
-			end,
-			["lua_ls"] = function()
-				-- configure lua server (with special settings)
-				lspconfig["lua_ls"].setup({
-					settings = {
-						Lua = {
-							-- make the language server recognize "vim" global
-							diagnostics = {
-								globals = { "vim" },
-							},
+			lspconfig.lua_ls.setup({
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+							disable = { "different-requires" },
 						},
 					},
-				})
-			end,
-		})
-	end,
+				},
+			})
+
+			lspconfig.rust_analyzer.setup({})
+
+			-- lspconfig.gopls.setup({
+			-- 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+			-- 	settings = {
+			-- 		env = {
+			-- 			GOEXPERIMENT = "rangefunc",
+			-- 		},
+			-- 		formatting = {
+			-- 			gofumpt = true,
+			-- 		},
+			-- 	},
+			-- })
+			--
+			-- lspconfig.tailwindcss.setup({
+			-- 	settings = {
+			-- 		includeLanguages = {
+			-- 			templ = "html",
+			-- 		},
+			-- 	},
+			-- })
+
+			lspconfig.templ.setup({})
+		end,
+	},
 }
