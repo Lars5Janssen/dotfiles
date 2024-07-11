@@ -2,7 +2,7 @@ return {
 	{
 		"mfussenegger/nvim-jdtls",
 		ft = { "java" },
-		event = { "FileReadPre", "BufReadPre", "FilterReadPre" },
+		-- event = { "FileReadPre", "BufReadPre", "FilterReadPre" },
 		config = function()
 			local conf = {
 				cmd = { "/usr/bin/jdtls" },
