@@ -1,16 +1,16 @@
 return {
   "mfussenegger/nvim-lint",
-    dependencies = {
-        "folke/which-key.nvim",
-    },
+  dependencies = {
+    "folke/which-key.nvim",
+  },
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     local lint = require("lint")
     local wk = require("which-key")
 
     lint.linters_by_ft = {
-        --Lua = { "luacheck" },
-        markdown = { "woke", "write_good", }
+      --Lua = { "luacheck" },
+      -- markdown = { "woke", "write_good", }
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
@@ -22,13 +22,16 @@ return {
       end,
     })
 
-
-
     wk.register({
-        ["<leader>l"] = {
-                name = "+linting",
-                l = { function() lint.try_lint() end, "Trigger linting for current file" },
-            },
+      ["<leader>l"] = {
+        name = "+linting",
+        l = {
+          function()
+            lint.try_lint()
+          end,
+          "Trigger linting for current file",
+        },
+      },
     })
   end,
 }
