@@ -30,12 +30,34 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 
 # Hotkeys
+bindkey -v
+export KEYTIMEOUT=1
 bindkey '^f' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^o' clear_screen
 zle -N clear_screen
-    
+
+function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] ||
+        [[ $1 = 'block' ]]; then
+            echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} == '' ]] ||
+        [[ $1 = 'line' ]]; then
+            echo -ne '\e[5 q'
+    fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins
+    echo -ne '\e[5 q'
+}
+zle -N zle-line-init
+echo -ne "\e[5 q"
+preexec() { echo -ne '\e[1 q'}
+
 function clear_screen ()
 {
     zle clear-screen
@@ -60,9 +82,9 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' 
-zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'ls --color $realpath' 
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls -A --color $realpath' 
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls -A --color $realpath'
 
 # Aliases
 alias c='clear'
@@ -79,7 +101,7 @@ alias l='ls -lA --color'
 alias L='ls -l --color'
 alias edit='nvim ~/.zshrc && source ~/.zshrc'
 alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
-alias edithl='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -' 
+alias edithl='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
 alias resource='source ~/.zshrc'
 alias restow='cd ~/dotfiles/ && stow . && cd -'
 alias n='nvim'
