@@ -7,6 +7,15 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
+			lspconfig.autotools_ls.setup({})
+			lspconfig.bashls.setup({})
+			lspconfig.docker_compose_language_service.setup({})
+			lspconfig.dockerls.setup({})
+			lspconfig.jedi_language_server.setup({})
+			lspconfig.jsonls.setup({})
+			lspconfig.rust_analyzer.setup({})
+			lspconfig.taplo.setup({})
+			lspconfig.yamlls.setup({})
 			lspconfig.lua_ls.setup({
 				settings = {
 					Lua = {
@@ -17,30 +26,6 @@ return {
 					},
 				},
 			})
-
-			lspconfig.rust_analyzer.setup({})
-
-			-- lspconfig.gopls.setup({
-			-- 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
-			-- 	settings = {
-			-- 		env = {
-			-- 			GOEXPERIMENT = "rangefunc",
-			-- 		},
-			-- 		formatting = {
-			-- 			gofumpt = true,
-			-- 		},
-			-- 	},
-			-- })
-			--
-			-- lspconfig.tailwindcss.setup({
-			-- 	settings = {
-			-- 		includeLanguages = {
-			-- 			templ = "html",
-			-- 		},
-			-- 	},
-			-- })
-
-			lspconfig.templ.setup({})
 		end,
 	},
 }

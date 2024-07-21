@@ -2,58 +2,58 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
-        {
-		    "L3MON4D3/LuaSnip",
-            dependencies = "rafamadriz/friendly-snippets",
-            opts = { history = true, updateevents = "TextChanged, TextChangedI" },
-            config = function (_, opts)
-                require("plugins.configs.others").luasnip(opts)
-            end,
-        },
-        {
-            "windwp/nvim-autopairs",
-            opts = {
-                fast_wrap = {},
-                disable_filetype = { "TelescopePrompt", "vim" },
-            },
-            config = function (_, opts)
-                require("nvim-autopairs").setup(opts)
+		{
+			"L3MON4D3/LuaSnip",
+			dependencies = "rafamadriz/friendly-snippets",
+			opts = { history = true, updateevents = "TextChanged, TextChangedI" },
+			config = function(_, opts)
+				require("plugins.configs.others").luasnip(opts)
+			end,
+		},
+		{
+			"windwp/nvim-autopairs",
+			opts = {
+				fast_wrap = {},
+				disable_filetype = { "TelescopePrompt", "vim" },
+			},
+			config = function(_, opts)
+				require("nvim-autopairs").setup(opts)
 
-                local cmp_autopairs = require "nvim-autopairs.completion.cmp"
-                require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
-            end,
-        },
-        "saadparwaiz1/cmp_luasnip",
-        "hrsh7th/cmp-nvim-lua",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
+				local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+				require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
+			end,
+		},
+		"saadparwaiz1/cmp_luasnip",
+		"hrsh7th/cmp-nvim-lua",
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
 		--"hrsh7th/cmp-nvim-lsp-signature-help",
-		--"chrisgreiser/cmp-nerdfont",
+		"chrisgreiser/cmp-nerdfont",
 		--"saadparwaiz1/cmp_luasnip",
 		--"rafamadriz/friendly-snippets",
 		--"onsails/lspkind.nvim",
 		--"neovim/nvim-lspconfig",
-        "folke/which-key.nvim",
+		"folke/which-key.nvim",
 	},
-    opts = function()
-        return require("plugins.configs.cmp")
-    end,
-    config = function (_, opts)
-        require("cmp").setup(opts)
-    end,
+	opts = function()
+		return require("plugins.configs.cmp")
+	end,
+	config = function(_, opts)
+		require("cmp").setup(opts)
+	end,
 	--config = function()
 	--	local cmp = require("cmp")
 	--	local luasnip = require("luasnip")
 	--	local lspkind = require("lspkind")
-    --    local wk = require("which-key")
+	--    local wk = require("which-key")
 	--	require("luasnip.loaders.from_vscode").lazy_load()
-    --    wk.register({
-    --        ["<leader>c"] = {
-    --            name = "+cmp",
-    --            a = { function() vim.lsp.buf.code_action({ apply = true }) end, "Code actions" },
-    --        }
-    --    })
+	--    wk.register({
+	--        ["<leader>c"] = {
+	--            name = "+cmp",
+	--            a = { function() vim.lsp.buf.code_action({ apply = true }) end, "Code actions" },
+	--        }
+	--    })
 	--	cmp.setup({
 	--		completion = {
 	--			completeop = "menu,menuone,previe,noselect",

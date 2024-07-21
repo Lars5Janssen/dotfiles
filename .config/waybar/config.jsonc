@@ -117,13 +117,10 @@
             "critical": 15
         },
         "format": "{icon}  {capacity}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
+        "format-charging": "{icon}󱐋 {capacity}%",
+        "format-plugged": "{icon}󱐋 {capacity}%",
+        "format-icons": ["󰂎","󰁼","󰁾","󰂀","󰁹"],
+        // "format-icons-charging": ["󰢟","󰂇","󰢝","󰢞","󰂅"],
         "on-click": "alacritty -e btop"
     },
     "backlight": {
