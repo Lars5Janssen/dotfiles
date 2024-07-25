@@ -1,3 +1,5 @@
+# tmux
+clear
 echo
 # Zinit
 # Set directory for zinit and plugins

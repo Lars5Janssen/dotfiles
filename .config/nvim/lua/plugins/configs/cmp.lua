@@ -3,7 +3,7 @@ local cmp = require("cmp")
 local cmp_ui = {
 	icons = true,
 	lspkind_text = true,
-	style = "default", -- default/flat_light/flat_dark/atom/atom_colored
+	style = "default",        -- default/flat_light/flat_dark/atom/atom_colored
 	border_color = "grey_fg", -- only applicable for "default" style, use color names from base30 variables
 	selected_item_bg = "simple", -- colored / simple
 }
@@ -115,7 +115,7 @@ local options = {
 		{ name = "nvim_lua" },
 		{ name = "path" },
 		{ name = "crates" },
-		{ name = "nerdfont" },
+		-- { name = "nerdfont" },
 	},
 }
 
@@ -130,7 +130,7 @@ return {
 		{ name = "path" },
 		{ name = "luasnip" },
 		{ name = "nvim_lua" },
-		{ name = "nerdfont" },
+		-- { name = "nerdfont" },
 	},
 	snippet = {
 		expand = function(args)
