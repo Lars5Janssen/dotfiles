@@ -126,10 +126,14 @@
     },
 
     "network": {
-        "format-wifi": "Wifi: {essid}",
+        "format-wifi": "Wifi",
         "format-ethernet": "Eth",
+        "format-disconnected": "DISCONNECTED",
         "tooltip": true,
-        "tooltip-format": "{ipaddr}",
+        "tooltip-format-ethernet": "{ipaddr} on Eth",
+        "tooltip-format-wifi": "{ipaddr} on {essid}",
+        "tooltip-format-disconnected": "",
+        "on-click": " ip addr show wlan0 | grep --regexp='[0-255]\\.' | awk '{ print $2 }' | wl-copy"
     },
 
     "battery": {
