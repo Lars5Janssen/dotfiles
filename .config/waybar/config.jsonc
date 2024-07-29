@@ -12,9 +12,13 @@
         "battery",
         "custom/right-arrow-dark",
         "custom/right-arrow-light",
+        "network",
+        "custom/right-arrow-dark",
+        "custom/right-arrow-light",
         "pulseaudio#2",
         "custom/right-arrow-dark"
     ],
+
     "modules-center": [
         "custom/left-arrow-dark",
         "clock#1",
@@ -26,6 +30,7 @@
         "clock#3",
         "custom/right-arrow-dark"
     ],
+
     "modules-right": [
         "custom/left-arrow-dark",
         "pulseaudio#1",
@@ -42,6 +47,7 @@
         "custom/left-arrow-dark",
         "tray"
     ],
+
     "custom/left-arrow-dark": {
         "format": "",
         "tooltip": false
@@ -58,22 +64,27 @@
         "format": "",
         "tooltip": false
     },
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "format": "{name}"
     },
+
     "clock#1": {
         "format": "{:%A}",
         "tooltip": false
     },
+
     "clock#2": {
         "format": "{:%H:%M}",
         "tooltip": false
     },
+
     "clock#3": {
         "format": "{:%d-%m} ",
         "tooltip": false
     },
+
     "pulseaudio#1": {
         "format": "{icon} {volume:2}%",
         "format-bluetooth": "{icon}  {volume}% ",
@@ -92,6 +103,7 @@
         "on-click-middle": "pactl set-sink-volume 0 100%",
         "on-click": "pamixer -t"
     },
+
     "pulseaudio#2": {
         "format": "{format_source}",
         "format-source": " {volume}%",
@@ -100,16 +112,26 @@
         "tooltip": false,
         "on-click": "~/.config/waybar/muteMic.sh"
     },
+
     "memory": {
         "interval": 5,
         "format": "Mem {}%",
         "on-click": "alacritty -e btop"
     },
+
     "cpu": {
         "interval": 5,
         "format": "CPU {usage:2}%",
         "on-click": "alacritty -e btop"
     },
+
+    "network": {
+        "format-wifi": "Wifi: {essid}",
+        "format-ethernet": "Eth",
+        "tooltip": true,
+        "tooltip-format": "{ipaddr}",
+    },
+
     "battery": {
         "states": {
             "good": 95,
@@ -123,6 +145,7 @@
         // "format-icons-charging": ["󰢟","󰂇","󰢝","󰢞","󰂅"],
         "on-click": "alacritty -e btop"
     },
+
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": [
@@ -135,12 +158,14 @@
         "on-scroll-up": "brightnessctl set 1%- -e 3",
         "on-click": "~/.dotfilesextended/scripts/toggleKbBacklight.sh"
     },
+
     "disk": {
         "interval": 5,
         "format": "Disk {percentage_used:2}%",
         "path": "/",
         "on-click": "alacritty -e btop"
     },
+
     "tray": {
         "icon-size": 20
     }
