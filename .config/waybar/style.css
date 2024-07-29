@@ -28,6 +28,7 @@ window#waybar {
 #pulseaudio,
 #memory,
 #cpu,
+#network,
 #battery,
 #disk,
 #tray {
@@ -86,6 +87,7 @@ window#waybar {
 #pulseaudio,
 #memory,
 #cpu,
+#network,
 #battery,
 #disk {
     padding: 0 10px;

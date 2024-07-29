@@ -126,9 +126,9 @@
     },
 
     "network": {
-        "format-wifi": "Wifi",
-        "format-ethernet": "Eth",
-        "format-disconnected": "DISCONNECTED",
+        "format-wifi": " Wifi ",
+        "format-ethernet": " Eth ",
+        "format-disconnected": " DISCONNECTED ",
         "tooltip": true,
         "tooltip-format-ethernet": "{ipaddr} on Eth",
         "tooltip-format-wifi": "{ipaddr} on {essid}",
