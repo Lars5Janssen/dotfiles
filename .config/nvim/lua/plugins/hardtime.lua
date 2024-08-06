@@ -2,8 +2,14 @@ return {
 
 	"m4xshen/hardtime.nvim",
 	dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-	opts = {},
-	config = function()
-		require("hardtime").setup()
-	end
+	opts = {
+		-- max_count = 5,
+		disabled_keys = {
+			["<Up>"] = {},
+			["<Down>"] = {},
+		},
+	},
+	config = function(_, opts)
+		require("hardtime").setup(opts)
+	end,
 }

@@ -137,11 +137,14 @@ openGit() {
 
 # Aliases
 alias L='ls -l --color'
+alias dnd='makoctl mode -a do-not-disturb'
+alias ndnd='makoctl mode -r do-not-disturb'
 alias b='lynx -cfg=~/.config/lynx/lynx.cfg'
 alias c='clear'
 alias d='BROWSER=w3m ddgr --reverse'
 alias edit='nvim ~/.zshrc && source ~/.zshrc'
-alias edithl='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
+alias editterm='nvim ~/.config/alacritty/alacritty.toml'
+alias editwm='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
 alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
 alias fm='nn'
 alias h='Hyprland'

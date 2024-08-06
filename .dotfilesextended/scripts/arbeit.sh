@@ -1,4 +1,5 @@
 #! /bin/bash
+ndnd
 sleep 2
 
 WIFISSID="$(iwctl station wlan0 show | grep "Connected network" | awk '{ print $3 }')"
@@ -18,5 +19,5 @@ sleep 12
 hyprctl dispatch workspace 1
 hyprctl dispatch workspace 2
 sleep 2
-firefox mail.desy.de &
+hyprctl dispatch exec "flatpak run org.mozilla.Thunderbird"
 xdg-open ~/Documents/desyZeit/Untitled\ spreadsheet.ods
