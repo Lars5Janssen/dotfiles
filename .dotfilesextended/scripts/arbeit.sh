@@ -20,4 +20,4 @@ hyprctl dispatch workspace 1
 hyprctl dispatch workspace 2
 sleep 2
 hyprctl dispatch exec "flatpak run org.mozilla.Thunderbird"
-xdg-open ~/Documents/desyZeit/Untitled\ spreadsheet.ods
+hyprctl dispatch exec "xdg-open ~/Nextcloud/Documents/Arbeit/DESY/Arbeitszeiterfassung.ods"
