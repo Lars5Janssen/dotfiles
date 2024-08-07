@@ -134,6 +134,12 @@ openGit() {
         echo "This is not an git repo.."
     fi
 }
+# Edit aliases
+alias edit='nvim ~/.zshrc && source ~/.zshrc'
+alias editbar='nvim ~/.config/waybar/config.jsonc'
+alias editterm='nvim ~/.config/alacritty/alacritty.toml'
+alias editwm='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
+alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
 
 # Aliases
 alias L='ls -l --color'
@@ -142,10 +148,6 @@ alias ndnd='makoctl mode -r do-not-disturb'
 alias b='lynx -cfg=~/.config/lynx/lynx.cfg'
 alias c='clear'
 alias d='BROWSER=w3m ddgr --reverse'
-alias edit='nvim ~/.zshrc && source ~/.zshrc'
-alias editterm='nvim ~/.config/alacritty/alacritty.toml'
-alias editwm='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
-alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
 alias fm='nn'
 alias h='Hyprland'
 alias l='ls -lA --color'
