@@ -92,7 +92,7 @@
         "interval": 2,
         "exec": "playerctl status | sed 's/Paused//' | sed 's/Playing//'",
         "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl metadata | awk '{print $3}' | sed 's&/org/mpris/MediaPlayer2/firefox&Firefox&g' | xargs -n1 notify-send",
+        "on-click-right": "~/.dotfilesextended/scripts/mediaNotification.sh",
     },
 
     "pulseaudio#1": {
@@ -101,6 +101,7 @@
         "format-muted": "   󰝟  ",
         "format-icons": {
             "headphones": "",
+            "alsa_output.usb-Synaptics_Hi-Res_Audio_000000000000000000000000-00.analog-stereo": "",
             "default": [
                 "",
                 "",
