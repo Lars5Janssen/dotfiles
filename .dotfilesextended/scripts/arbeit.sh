@@ -1,4 +1,7 @@
 #! /bin/bash
+# A script that activates when the computer is connected to the wifi of my workplace
+# it then executes my "morning work routine" whatever that my be
+
 ndnd
 sleep 2
 
@@ -13,7 +16,7 @@ echo "At work; Executing work routine"
 
 hyprctl dispatch workspace 10
 hyprctl dispatch exec /opt/cisco/secureclient/bin/vpnui
-sleep 1
+sleep 2
 hyprctl dispatch focuswindow title:privat.kdbx
 sleep 12
 hyprctl dispatch workspace 1

@@ -22,6 +22,7 @@ window#waybar {
 }
 
 #workspaces,
+#backlight,
 #clock.1,
 #clock.2,
 #clock.3,
@@ -29,7 +30,7 @@ window#waybar {
 #memory,
 #cpu,
 #network,
-#custom-playerctl
+#custom-playerctl,
 #battery,
 #disk,
 #tray {
