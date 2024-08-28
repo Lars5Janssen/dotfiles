@@ -19,8 +19,14 @@ hyprctl dispatch exec /opt/cisco/secureclient/bin/vpnui
 sleep 2
 hyprctl dispatch focuswindow title:privat.kdbx
 sleep 12
+
+hyprctl dispatch workspace 2
 hyprctl dispatch workspace 1
+hyprctl dispatch workspace 10
 hyprctl dispatch workspace 2
 sleep 2
+
 hyprctl dispatch exec "flatpak run org.mozilla.Thunderbird"
 hyprctl dispatch exec "xdg-open ~/Nextcloud/Documents/Arbeit/DESY/Arbeitszeiterfassung.ods"
+sleep 2
+hyprctl dispatch exec /usr/bin/intellij-idea-ultimate-edition
