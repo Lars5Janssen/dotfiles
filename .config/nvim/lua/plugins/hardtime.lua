@@ -7,6 +7,8 @@ return {
 		disabled_keys = {
 			["<Up>"] = {},
 			["<Down>"] = {},
+			["<Left>"] = {},
+			["<Right>"] = {},
 		},
 	},
 	config = function(_, opts)

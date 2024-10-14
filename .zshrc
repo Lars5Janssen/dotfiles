@@ -165,6 +165,9 @@ alias tls='tmux ls'
 alias vi='nvim'
 alias vim='nvim'
 
+# Exports
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
