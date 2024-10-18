@@ -9,13 +9,12 @@ return {
 		"folke/which-key.nvim",
 	},
 	config = function()
-        local wk = require("which-key")
-        wk.register({
-            ["<leader>t"] = {
-                name = "+Filetree",
-                j = { ":Neotree focus<CR>", "Open Filetree" },
-                k = { ":Neotree close<CR>", "Close Filetree" },
-            }
-        })
+		local wk = require("which-key")
+		wk.register({
+			["<leader>t"] = {
+				j = { ":Neotree focus<CR>", "Open Filetree" },
+				k = { ":Neotree close<CR>", "Close Filetree" },
+			},
+		})
 	end,
 }
