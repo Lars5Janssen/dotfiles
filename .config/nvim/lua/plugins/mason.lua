@@ -10,6 +10,7 @@ return {
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		dependencies = { "williamboman/mason.nvim" },
+		opts = require("plugins.configs.mason"),
 		cmd = {
 			"MasonToolsInstall",
 			"MasonToolsInstallSync",
@@ -18,5 +19,8 @@ return {
 			"MasonToolsClean",
 		},
 		build = ':execute "MasonToolsClean" | "MasonToolsInstall | "MasonToolsUpdate"',
+		config = function(_, opts)
+			require("mason-tool-installer").setup(opts)
+		end,
 	},
 }

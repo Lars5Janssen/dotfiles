@@ -17,20 +17,20 @@ return {
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 			group = lint_augroup,
+
 			callback = function()
 				lint.try_lint()
 			end,
 		})
 
-		wk.register({
-			["<leader>l"] = {
-				name = "+linting",
-				l = {
-					function()
-						lint.try_lint()
-					end,
-					"Trigger linting for current file",
-				},
+		wk.add({
+			{ "<leader>l", group = "linting" },
+			{
+				"<leader>ll",
+				function()
+					lint.try_lint()
+				end,
+				desc = "Trigger linting for current file",
 			},
 		})
 	end,

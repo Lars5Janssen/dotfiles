@@ -18,44 +18,71 @@ return {
 				end
 
 				-- Actions
-				wk.register({
-                    ["[c"] = { function ()
-                        if vim.wo.diff then
-                            vim.cmd.normal({ "[c", bang = true })
-                        else
-                            gitsigns.nav_hunk("prev")
-                        end
-                    end, "[c" },
-                    ["]c"] = { function ()
-                        if vim.wo.diff then
-                            vim.cmd.normal({ "]c", bang = true })
-                        else
-                            gitsigns.nav_hunk("prev")
-                        end
-                    end, "]c" },
-					["<leader>g"] = {
-						name = "+gitsigns",
-						s = { gitsigns.stage_hunk, "Stage hunk" },
-                        r = { gitsigns.reset_hunk, "Reset hunk" },
-                        S = { gitsigns.stage_buffer, "Stage buffer" },
-                        u = { gitsigns.undo_stage_hunk, "Undo stage hunk" },
-                        R = { gitsigns.reset_buffer, "Reset buffer" },
-                        p = { gitsigns.preview_hunk, "Preview hunk" },
-                        B = { gitsigns.toggle_current_line_blame, "Toggle current line blame" },
-                        t = { gitsigns.toggle_deleted, "Toggle deleted" },
-                        b = { function() gitsigns.blame_line({ full = true }) end, "Blame line (full)" },
-                        d = { gitsigns.diffthis, "diff this" },
-                        D = { function() gitsigns.diffthis("~") end, "diff this ~" },
-
+				wk.add({
+					{ "<leader>g", group = "gitsigns" },
+					{ mode = "v" },
+					{ "<leader>gs", gitsigns.stage_hunk, desc = "Stage hunk" },
+					{ "<leader>gr", gitsigns.reset_hunk, desc = "Reset hunk" },
+					{ "<leader>gS", gitsigns.stage_buffer, desc = "Stage buffer" },
+					{ "<leader>gu", gitsigns.undo_stage_hunk, desc = "Undo stage hunk" },
+					{ "<leader>gR", gitsigns.reset_buffer, desc = "Reset buffer" },
+					{ "<leader>gp", gitsigns.preview_hunk, desc = "Preview hunk" },
+					{ "<leader>gB", gitsigns.toggle_current_line_blame, desc = "Toggle current line blame" },
+					{ "<leader>gt", gitsigns.toggle_deleted, desc = "Toggle deleted" },
+					{ "<leader>gd", gitsigns.diffthis, desc = "diff this" },
+					{
+						"<leader>gb",
+						function()
+							gitsigns.blame_line({ full = true })
+						end,
+						desc = "Blame line (full)",
+					},
+					{
+						"<leader>gD",
+						function()
+							gitsigns.diffthis("~")
+						end,
+						desc = "diff this ~",
+					},
+					{
+						"<leader>gs",
+						function()
+							gitsigns.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+						end,
+						desc = "Stage selected hunk",
+					},
+					{
+						"<leader>gr",
+						function()
+							gitsigns.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+						end,
+						desc = "Reset selected hunk",
 					},
 				})
-                wk.register({
-                    ["<leader>g"] = {
-                        name = "+gitsigns",
-                        s = { function() gitsigns.stage_hunk({ vim.fn.line("."), vim.fn.line("v") }) end, "Stage selected hunk" },
-                        r = { function() gitsigns.reset_hunk({ vim.fn.line("."), vim.fn.line("v") }) end, "Reset selected hunk" },
-                    }, { mode = "v" }
-                })
+				wk.add({
+					{
+						"[c",
+						function()
+							if vim.wo.diff then
+								vim.cmd.normal({ "[c", bang = true })
+							else
+								gitsigns.nav_hunk("prev")
+							end
+						end,
+						desc = "[c",
+					},
+					{
+						"]c",
+						function()
+							if vim.wo.diff then
+								vim.cmd.normal({ "]c", bang = true })
+							else
+								gitsigns.nav_hunk("prev")
+							end
+						end,
+						desc = "]c",
+					},
+				})
 				-- Text object
 				--map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
 			end,
