@@ -24,8 +24,11 @@ return {
 			},
 		})
 
-		wk.register({
-			["<leader>lf"] = {
+		wk.add({
+			{ mode = { "n", "v" } },
+			{ "<leader>l", group = "formatter" },
+			{
+				"<leader>lf",
 				function()
 					conform.format({
 						lsp_fallback = true,
@@ -33,9 +36,8 @@ return {
 						timeout_ms = 500,
 					})
 				end,
-				"Format file or range",
+				desc = "Format file or range",
 			},
-			{ mode = { "n", "v" } },
 		})
 	end,
 }

@@ -10,15 +10,49 @@ return {
         local wk = require("which-key")
 
         harpoon:setup()
-        wk.register({
-            ["<leader>h"] = {
-                name = "+harpoon",
-                a = { function() harpoon:list():add() end, "Add File to Harpoon"},
-                e = { function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, "Toggle Harpoon Menu"},
-                ["1"] = { function() harpoon:list():select(1) end, "Select first harpoon entry"},
-                ["2"] = { function() harpoon:list():select(2) end, "Select second harpoon entry"},
-                ["3"] = { function() harpoon:list():select(3) end, "Select third harpoon entry"},
-                ["4"] = { function() harpoon:list():select(4) end, "Select fourth harpoon entry"},
+        wk.add({
+            { "<leader>h", group = "harpoon" },
+            {
+                "<leader>ha",
+                function()
+                    harpoon:list():add()
+                end,
+                desc = "Add File to Harpoon",
+            },
+            {
+                "<leader>he",
+                function()
+                    harpoon.ui:toggle_quick_menu(harpoon:list())
+                end,
+                desc = "Toggle Harpoon Menu",
+            },
+            {
+                "<leader>h!",
+                function()
+                    harpoon:list():select(1)
+                end,
+                desc = "Select first harpoon entry",
+            },
+            {
+                "<leader>h@",
+                function()
+                    harpoon:list():select(2)
+                end,
+                desc = "Select second harpoon entry",
+            },
+            {
+                "<leader>h#",
+                function()
+                    harpoon:list():select(3)
+                end,
+                desc = "Select third harpoon entry",
+            },
+            {
+                "<leader>h$",
+                function()
+                    harpoon:list():select(4)
+                end,
+                desc = "Select fourth harpoon entry",
             },
         })
         -- Toggle previous & next buffers stored within Harpoon list

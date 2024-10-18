@@ -10,11 +10,16 @@ return {
 	},
 	config = function()
 		local wk = require("which-key")
-		wk.register({
-			["<leader>t"] = {
-				j = { ":Neotree focus<CR>", "Open Filetree" },
-				k = { ":Neotree close<CR>", "Close Filetree" },
-			},
+		wk.add({
+			{ "<leader>t", group = "Filetree" },
+			{ "<leader>tj", "<cmd>Neotree focus<CR>", desc = "Open Filetree" },
+			{ "<leader>tk", "<cmd>Neotree close<CR>", desc = "Close Filetree" },
 		})
+		-- wk.register({
+		-- 	["<leader>t"] = {
+		-- 		j = { ":Neotree focus<CR>", "Open Filetree" },
+		-- 		k = { ":Neotree close<CR>", "Close Filetree" },
+		-- 	},
+		-- })
 	end,
 }
