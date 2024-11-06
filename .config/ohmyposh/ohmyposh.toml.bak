@@ -1,0 +1,154 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+
+[transient_prompt]
+foreground = 'p:text'
+background = 'transparent'
+template = '❯ '
+
+[[blocks]]
+type = 'prompt'
+newline = true
+alignment = 'left'
+
+[[blocks.segments]]
+type = 'os'
+style = 'powerline'
+powerline_symbol = ''
+leading_powerline_symbol = ''
+foreground = 'p:crust'
+background = 'p:blue'
+
+[[blocks.segments]]
+type = 'git'
+style = 'accordion'
+powerline_symbol = ''
+foreground = 'p:crust'
+background = 'p:pink'
+template = ' {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }} {{ end }}'
+
+[blocks.segments.properties]
+fetch_status = true
+
+[[blocks.segments]]
+type = 'git'
+style = 'powerline'
+powerline_symbol = ''
+foreground = 'p:crust'
+background = 'p:text'
+foreground_templates = [
+  "{{if .Working.Changed}}p:crust{{end}}",
+  "{{if eq .Working.Changed false}}p:text{{end}}",
+]
+template = "{{ if .Working.Changed }} 󰏫 {{ .Working.String }}{{ end }}{{ if eq .Working.Changed false }}--{{ end }}"
+
+
+[blocks.segments.properties]
+fetch_status = true
+
+[[blocks.segments]]
+type = 'git'
+style = 'accordion'
+powerline_symbol = ''
+invert_powerline = true
+foreground = 'p:crust'
+background = 'p:pink'
+foreground_templates = [
+  "{{if .Staging.Changed}}p:crust{{end}}",
+  "{{if eq .Staging.Changed false}}p:pink{{end}}",
+]
+template = '{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if eq .Staging.Changed false }}--{{ end }}'
+
+[blocks.segments.properties]
+fetch_status = true
+
+[[blocks.segments]]
+type = 'path'
+style = 'accordion'
+powerline_symbol = ''
+invert_powerline = true
+foreground = 'p:crust'
+background = 'p:blue'
+
+[[blocks.segments]]
+type = 'text'
+style = 'accordion'
+foreground = 'p:crust'
+background = 'p:blue'
+
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+template = ''
+foreground = 'p:blue'
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+foreground_templates = [
+  "{{if gt .Code 0}}p:red{{end}}",
+  "{{if eq .Code 0}}p:blue{{end}}",
+]
+background = 'transparent'
+template = '❯'
+
+[[blocks]]
+type = 'rprompt'
+overflow = 'hidden'
+
+[[blocks.segments]]
+type = 'executiontime'
+style = 'plain'
+foreground = 'p:yelllow'
+background = 'transparent'
+template = '{{ .FormattedMs }}  '
+
+[blocks.segments.properties]
+style = 'round'
+threshold = 5000
+
+
+[secondary_prompt]
+foreground = 'p:green'
+background = 'transparent'
+template = '❯❯ '
+
+[palette]
+rosewater = '#f5e0dc'
+flamingo = '#f2cdcd'
+pink = '#F5C2E7'
+mauve = '#cba6f7'
+red = '#f38ba8'
+maroon = '#eba0ac'
+peach = '#fab387'
+yelllow = '#f9e2af'
+green = '#a6e3a1'
+teal = '#94e2d5'
+sky = '#89dceb'
+sapphire = '#74c7ec'
+blue = '#89B4FA'
+lavender = '#B4BEFE'
+
+text = '#cdd6f4'
+subtext0 = '#a6adc8'
+subtext1 = '#bac2de'
+overlay0 = '#6c7086'
+overlay1 = '#7f849c'
+overlay2 = '#9399b2'
+surface0 = '#313244'
+surface1 = '#45475a'
+surface2 = '#585b70'
+
+base = '#1e1e2e'
+mantle = '#181825'
+crust = '#11111b'
+
+closer = 'p:os'
+os = '#ACB0BE'
