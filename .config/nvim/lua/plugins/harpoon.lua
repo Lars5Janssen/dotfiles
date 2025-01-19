@@ -27,28 +27,28 @@ return {
                 desc = "Toggle Harpoon Menu",
             },
             {
-                "<leader>h!",
+                "<leader>h1",
                 function()
                     harpoon:list():select(1)
                 end,
                 desc = "Select first harpoon entry",
             },
             {
-                "<leader>h@",
+                "<leader>h2",
                 function()
                     harpoon:list():select(2)
                 end,
                 desc = "Select second harpoon entry",
             },
             {
-                "<leader>h#",
+                "<leader>h3",
                 function()
                     harpoon:list():select(3)
                 end,
                 desc = "Select third harpoon entry",
             },
             {
-                "<leader>h$",
+                "<leader>h4",
                 function()
                     harpoon:list():select(4)
                 end,

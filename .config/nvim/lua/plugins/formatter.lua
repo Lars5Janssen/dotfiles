@@ -12,7 +12,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				--java = { "google-java-format" },
-				markdown = { { "prettierd", "prettier" } },
+				markdown = { "prettierd" },
 				bash = { "beautysh" },
 				rust = { "rustfmt" },
 				yaml = { "yamlfix" },
