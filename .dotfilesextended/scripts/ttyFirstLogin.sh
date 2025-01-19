@@ -1,8 +1,16 @@
 #!/usr/bin/bash
 
+# if [ -f /run/user/1000/tty1started ] ; then
+#     echo "FILE FOUND"
+# else
+#     echo "NOT FOUND"
+# fi
+# #!/bin/bash
+#
 if [ -f /run/user/1000/tty1started ] ; then
-    /usr/bin/agetty --noclear tty1 $TERM
+    /sbin/agetty -o '-p -- \\u' --noclear - $TERM
 else
     touch /run/user/1000/tty1started
-    /usr/bin/agetty --autologin l --noclear tty1 $TERM
+    /sbin/agetty --autologin l --noclear - $TERM
 fi
+

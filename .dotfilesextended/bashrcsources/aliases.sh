@@ -85,8 +85,6 @@ alias obwifi='nmtui-connect Osterberg'
 
 # uncategorized aliases
 alias n='nvim'
-alias r='nnn'
-alias nn='nnn'
 
 alias checkbat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias gay='lolcat'
