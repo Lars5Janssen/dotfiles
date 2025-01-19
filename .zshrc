@@ -65,6 +65,12 @@ function clear_screen ()
     zle clear-screen
     zle reset-prompt
 }
+
+export NNN_OPTS="ae" 
+export TMPDIR=${TMPDIR:-/tmp}
+# export LC_COLLATE="C" # hidden files on top
+export NNN_PLUG='p:preview-tui' 
+export SPLIT='v' # to split Kitty vertically
 nn ()
 {
     # Block nesting of nnn in subshells
@@ -88,7 +94,7 @@ nn ()
 
     # The command builtin allows one to  nnn to n, if desired, without
     # making an infinitely recursive
-    command nnn "$@"
+    command nnn -P p "$@"
 
     [ ! -f "$NNN_TMPFILE" ] || {
         . "$NNN_TMPFILE"
@@ -137,9 +143,13 @@ openGit() {
 # Edit aliases
 alias edit='nvim ~/.zshrc && source ~/.zshrc'
 alias editbar='cd ~/.config/waybar/ && nvim ~/.config/waybar/config.jsonc && cd - && ./.config/waybar/reloadWaybar.sh'
-alias editterm='nvim ~/.config/alacritty/alacritty.toml'
+alias editterm='nvim ~/.config/kitty/kitty.conf'
 alias editwm='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
 alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
+
+# Connman Aliases
+alias connOn='sudo systemctl start connman.service'
+alias connDown='sudo systemctl stop connman.service'
 
 # Aliases
 alias L='ls -l --color'
@@ -175,3 +185,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/ohmyposh.toml)"
 
 # Created by `pipx` on 2024-11-13 19:30:07
 export PATH="$PATH:/home/l/.local/bin"
+/home/l/.dotfilesextended/scripts/tty1orNot.sh
+export PATH="/home/l/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/l/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
