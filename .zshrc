@@ -172,3 +172,6 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/ohmyposh.toml)"
+
+# Created by `pipx` on 2024-11-13 19:30:07
+export PATH="$PATH:/home/l/.local/bin"
