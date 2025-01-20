@@ -13,6 +13,7 @@ return {
 		"taplo",
 		"yaml-language-server",
 		"lua-language-server",
+		"ansible-language-server",
 		-- REST
 		"beautysh",
 		"gofumpt",
@@ -23,6 +24,7 @@ return {
 		"stylua",
 		"woke",
 		"yamlfix",
+		"ansible-lint",
 	},
 	auto_update = true,
 }
