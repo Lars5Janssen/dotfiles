@@ -142,7 +142,7 @@ openGit() {
 }
 # Edit aliases
 alias edit='nvim ~/.zshrc && source ~/.zshrc'
-alias editbar='cd ~/.config/waybar/ && nvim ~/.config/waybar/config.jsonc && cd - && ./.config/waybar/reloadWaybar.sh'
+alias editbar='cd ~/.config/waybar/ && nvim ~/.config/waybar/config.jsonc && cd - && ~/.config/waybar/reloadWaybar.sh'
 alias editterm='nvim ~/.config/kitty/kitty.conf'
 alias editwm='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
 alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'

@@ -92,7 +92,7 @@
         "interval": 5,
         "exec": "playerctl status 2> /dev/null | sed 's/Playing//' | sed 's/Paused//'",
         "on-click": "playerctl play-pause",
-        "on-click-right": "~/.dotfilesextended/scripts/mediaNotification.sh",
+        "on-click-right": "~/.dotfilesextended/scripts/mediaNotification.sh"
     },
 
     "pulseaudio#1": {
@@ -127,13 +127,13 @@
     "memory": {
         "interval": 5,
         "format": "Mem {}%",
-        "on-click": "alacritty -e btop"
+        "on-click": "kitty -e btop"
     },
 
     "cpu": {
         "interval": 5,
         "format": "CPU {usage:2}%",
-        "on-click": "alacritty -e btop"
+        "on-click": "kitty -e btop"
     },
 
     "network": {
@@ -158,7 +158,7 @@
         "format-plugged": "{icon}󱐋 {capacity}%",
         "format-icons": ["󰂎","󰁼","󰁾","󰂀","󰁹"],
         // "format-icons-charging": ["󰢟","󰂇","󰢝","󰢞","󰂅"],
-        "on-click": "alacritty -e btop"
+        "on-click": "kitty -e btop"
     },
 
     "backlight": {
@@ -179,7 +179,7 @@
         "interval": 5,
         "format": "Disk {percentage_used:2}%",
         "path": "/",
-        "on-click": "alacritty -e btop"
+        "on-click": "kitty -e btop"
     },
 
     "tray": {
