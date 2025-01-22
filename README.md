@@ -15,7 +15,6 @@ Every file in ~/bashrcsources/ will be sources.
 - starship config
 - nvim config with packer.nvim 
 - polybar config and launchscript
-- test
 
 # TODO
 - [ ] polybar launchscript needs chmod +x, this will not be auto replicated on a new system
