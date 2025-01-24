@@ -126,14 +126,14 @@
 
     "memory": {
         "interval": 5,
-        "format": "Mem {}%",
-        "on-click": "kitty -e btop"
+        "format": "Mem {}%"
+        // "on-click": "kitty -e btop "
     },
 
     "cpu": {
         "interval": 5,
-        "format": "CPU {usage:2}%",
-        "on-click": "kitty -e btop"
+        "format": "CPU {usage:2}%"
+        // "on-click": "kitty -e btop"
     },
 
     "network": {
@@ -156,9 +156,9 @@
         "format": "{icon}  {capacity}%",
         "format-charging": "{icon}󱐋 {capacity}%",
         "format-plugged": "{icon}󱐋 {capacity}%",
-        "format-icons": ["󰂎","󰁼","󰁾","󰂀","󰁹"],
+        "format-icons": ["󰂎","󰁼","󰁾","󰂀","󰁹"]
         // "format-icons-charging": ["󰢟","󰂇","󰢝","󰢞","󰂅"],
-        "on-click": "kitty -e btop"
+        // "on-click": "kitty -e btop"
     },
 
     "backlight": {
@@ -178,8 +178,8 @@
     "disk": {
         "interval": 5,
         "format": "Disk {percentage_used:2}%",
-        "path": "/",
-        "on-click": "kitty -e btop"
+        "path": "/"
+        // "on-click": "kitty -e btop"
     },
 
     "tray": {
