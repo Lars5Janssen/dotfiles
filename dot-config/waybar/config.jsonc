@@ -121,7 +121,10 @@
         "format-source-muted": "    ",
         "scroll-step": 5,
         "tooltip": false,
-        "on-click": "~/.config/waybar/muteMic.sh"
+        "on-click": "pactl set-source-mute \"$(pactl get-default-source)\" toggle",
+        "on-click-middle": "pactl set-source-mute \"$(pactl get-default-source)\" false; pactl set-source-volume \"$(pactl get-default-source)\" 100%",
+        "on-scroll-down": "pactl set-source-mute \"$(pactl get-default-source)\" false; pactl set-source-volume \"$(pactl get-default-source)\" -1%",
+        "on-scroll-up": "pactl set-source-mute \"$(pactl get-default-source)\" false; pactl set-source-volume \"$(pactl get-default-source)\" +1%"
     },
 
     "memory": {
