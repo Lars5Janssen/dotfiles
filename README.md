@@ -8,7 +8,7 @@ To better manage the .bashrc, it has been split up into multiple.
 Every file in ~/bashrcsources/ will be sources.
 
 # Everything this dotfiles repo contains:
-
+EDIT
 - .bashrc
 - .fonts
 - .env & env.sh for managing env vars
