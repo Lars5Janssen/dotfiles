@@ -10,6 +10,7 @@ return {
 		"gopls",
 		"json-lsp",
 		"rust-analyzer",
+		"codelldb",
 		"taplo",
 		"yaml-language-server",
 		"lua-language-server",

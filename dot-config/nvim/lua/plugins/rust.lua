@@ -1,4 +1,11 @@
 return {
+	-- {
+	-- 	"cordx56/rustowl",
+	-- 	dependencies = "neovim/nvim-lspconfig",
+	-- },
+	{
+		"mrcjkb/rustaceanvim",
+	},
 	{
 		"saecki/crates.nvim",
 		ft = { "rust", "toml" },
