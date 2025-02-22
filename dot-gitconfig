@@ -2,6 +2,15 @@
 	email = lars.e.janssen@gmail.com
 	name = Lars Janssen
 
+[includeif "gitdir:~/Projects/private/"]
+    path = ~/Projects/private/.gitconfig
+
+[includeif "gitdir:~/Projects/desy/"]
+    path = ~/Projects/desy/.gitconfig
+
+[includeif "gitdir:~/Projects/haw/"]
+    path = ~/Projects/haw/.gitconfig
+
 [init]
     defaultBranch = main
 
