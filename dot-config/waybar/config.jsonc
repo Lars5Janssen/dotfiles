@@ -108,11 +108,11 @@
                 ""
             ]
         },
-        "on-scroll-down": "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -1%",
-        "on-scroll-up": "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +1%",
+        "on-scroll-down": "~/.dotfilesextended/scripts/setVol.sh sink -1% unmute",
+        "on-scroll-up": "~/.dotfilesextended/scripts/setVol.sh sink +1% unmute",
+        "on-click-middle": "~/.dotfilesextended/scripts/setVol.sh sink 100% unmute",
         "on-click-right": "pavucontrol &>/dev/null",
-        "on-click-middle": "pactl set-sink-volume 0 100%",
-        "on-click": "pamixer -t"
+        "on-click": "~/.dotfilesextended/scripts/setVol.sh sink mute_toggle"
     },
 
     "pulseaudio#2": {
@@ -121,10 +121,10 @@
         "format-source-muted": "    ",
         "scroll-step": 5,
         "tooltip": false,
-        "on-click": "pactl set-source-mute \"$(pactl get-default-source)\" toggle",
-        "on-click-middle": "pactl set-source-mute \"$(pactl get-default-source)\" false; pactl set-source-volume \"$(pactl get-default-source)\" 100%",
-        "on-scroll-down": "pactl set-source-mute \"$(pactl get-default-source)\" false; pactl set-source-volume \"$(pactl get-default-source)\" -1%",
-        "on-scroll-up": "pactl set-source-mute \"$(pactl get-default-source)\" false; pactl set-source-volume \"$(pactl get-default-source)\" +1%"
+        "on-click": "~/.dotfilesextended/scripts/setVol.sh source mute_toggle",
+        "on-click-middle": "~/.dotfilesextended/scripts/setVol.sh source 100% unmute",
+        "on-scroll-down": "~/.dotfilesextended/scripts/setVol.sh source -1% unmute",
+        "on-scroll-up": "~/.dotfilesextended/scripts/setVol.sh source +1% unmute"
     },
 
     "memory": {
