@@ -92,7 +92,7 @@
         "interval": 5,
         "exec": "playerctl status 2> /dev/null | sed 's/Playing//' | sed 's/Paused//'",
         "on-click": "playerctl play-pause",
-        "on-click-right": "~/.dotfilesextended/scripts/mediaNotification.sh"
+        "on-click-right": "~/scripts/mediaNotification.sh"
     },
 
     "pulseaudio#1": {
@@ -108,11 +108,11 @@
                 ""
             ]
         },
-        "on-scroll-down": "~/.dotfilesextended/scripts/setVol.sh sink -1% unmute",
-        "on-scroll-up": "~/.dotfilesextended/scripts/setVol.sh sink +1% unmute",
-        "on-click-middle": "~/.dotfilesextended/scripts/setVol.sh sink 100% unmute",
+        "on-scroll-down": "~/scripts/setVol.sh sink -1% unmute",
+        "on-scroll-up": "~/scripts/setVol.sh sink +1% unmute",
+        "on-click-middle": "~/scripts/setVol.sh sink 100% unmute",
         "on-click-right": "pavucontrol &>/dev/null",
-        "on-click": "~/.dotfilesextended/scripts/setVol.sh sink mute_toggle"
+        "on-click": "~/scripts/setVol.sh sink mute_toggle"
     },
 
     "pulseaudio#2": {
@@ -121,10 +121,10 @@
         "format-source-muted": "    ",
         "scroll-step": 5,
         "tooltip": false,
-        "on-click": "~/.dotfilesextended/scripts/setVol.sh source mute_toggle",
-        "on-click-middle": "~/.dotfilesextended/scripts/setVol.sh source 100% unmute",
-        "on-scroll-down": "~/.dotfilesextended/scripts/setVol.sh source -1% unmute",
-        "on-scroll-up": "~/.dotfilesextended/scripts/setVol.sh source +1% unmute"
+        "on-click": "~/scripts/setVol.sh source mute_toggle",
+        "on-click-middle": "~/scripts/setVol.sh source 100% unmute",
+        "on-scroll-down": "~/scripts/setVol.sh source -1% unmute",
+        "on-scroll-up": "~/scripts/setVol.sh source +1% unmute"
     },
 
     "memory": {
@@ -174,8 +174,8 @@
         ],
         "on-scroll-up": "brightnessctl set +1% -e 3",
         "on-scroll-down": "brightnessctl set 1%- -e 3",
-        "on-click": "~/.dotfilesextended/scripts/toggleKbBacklight.sh",
-        "tooltip": false,
+        "on-click": "~/scripts/toggleKbBacklight.sh",
+        "tooltip": false
     },
 
     "disk": {
