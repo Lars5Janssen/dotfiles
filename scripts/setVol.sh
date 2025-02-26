@@ -1,5 +1,8 @@
 #! /bin/bash
 
+def_sink_vol="75%"
+def_source_vol="100%"
+
 if [[ $1 == "source" ]]; then
     current_source="$(pactl get-default-source)"
 
@@ -13,7 +16,11 @@ if [[ $1 == "source" ]]; then
         if [[ $3 == "unmute" ]]; then
         pactl set-source-mute $current_source false
         fi
-        pactl set-source-volume $current_source $2
+        if [[ $2 == "default" ]]; then
+            pactl set-source-volume $current_source $def_source_vol
+        else
+            pactl set-source-volume $current_source $2
+        fi
     fi
 
 elif [[ $1 == "sink" ]]; then
@@ -29,6 +36,10 @@ elif [[ $1 == "sink" ]]; then
         if [[ $3 == "unmute" ]]; then
         pactl set-sink-mute $current_sink false
         fi
-        pactl set-sink-volume $current_sink $2
+        if [[ $2 == "default" ]]; then
+            pactl set-sink-volume $current_sink $def_sink_vol
+        else
+            pactl set-sink-volume $current_sink $2
+        fi
     fi
 fi
