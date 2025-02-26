@@ -185,6 +185,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/ohmyposh.toml)"
 
 # Created by `pipx` on 2024-11-13 19:30:07
 export PATH="$PATH:/home/l/.local/bin"
-/home/l/.dotfilesextended/scripts/tty1orNot.sh
+/home/l/scripts/tty1orNot.sh
 export PATH="/home/l/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/l/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"

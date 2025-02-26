@@ -1,2 +1,4 @@
-.config/go/telemetry
+dot-config/go/telemetry
 dot-config/btop/btop.*
+dot-fonts/.uuid
+
