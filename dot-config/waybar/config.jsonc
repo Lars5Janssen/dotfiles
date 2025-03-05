@@ -110,7 +110,7 @@
         },
         "on-scroll-down": "~/scripts/setVol.sh sink -1% unmute",
         "on-scroll-up": "~/scripts/setVol.sh sink +1% unmute",
-        "on-click-middle": "~/scripts/setVol.sh sink 100% unmute",
+        "on-click-middle": "~/scripts/setVol.sh sink default unmute",
         "on-click-right": "pavucontrol &>/dev/null",
         "on-click": "~/scripts/setVol.sh sink mute_toggle"
     },
