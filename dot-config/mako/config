@@ -10,6 +10,8 @@ on-button-right=dismiss-group
 on-touch=dismiss
 on-notify=none
 font=MesloLGS Nerd Font Mono
+#height=999
+width=999
 
 # Colors
 
@@ -24,3 +26,4 @@ border-color=#f38ba8
 
 [mode=do-not-disturb]
 invisible=1
+
