@@ -142,10 +142,11 @@ openGit() {
 }
 # Edit aliases
 alias edit='nvim ~/.zshrc && source ~/.zshrc'
-alias editbar='cd ~/.config/waybar/ && nvim ~/.config/waybar/config.jsonc && cd - && ~/.config/waybar/reloadWaybar.sh'
+alias editbar='cd ~/.config/waybar/ && nvim ~/.config/waybar/config.jsonc && cd - && ~/.config/waybar/reloadWaybar.sh &>/dev/null'
 alias editterm='nvim ~/.config/kitty/kitty.conf'
 alias editwm='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
 alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
+alias editnotification='nvim ~/.config/fnott/fnott.ini && fnottctl quit && fnott &>/dev/null &'
 
 # Connman Aliases
 alias connOn='sudo systemctl start connman.service'
@@ -153,8 +154,8 @@ alias connDown='sudo systemctl stop connman.service'
 
 # Aliases
 alias L='ls -l --color'
-alias dnd='makoctl mode -a do-not-disturb'
-alias ndnd='makoctl mode -r do-not-disturb'
+alias dnd='fnottctl pause'
+alias ndnd='fnottctl unpause'
 alias b='lynx -cfg=~/.config/lynx/lynx.cfg'
 alias c='clear'
 alias d='BROWSER=w3m ddgr --reverse'
