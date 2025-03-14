@@ -2,14 +2,12 @@
 
 // scriptisto-begin
 // script_src: src/main.rs
-// build_cmd: cargo build --release && strip ./target/release/script
+// build_cmd: sleep 3 && cargo build --release && strip ./target/release/script
 // target_bin: ./target/release/script
 // files:
 //  - path: Cargo.toml
 //    content: |
-//     package = { name = "script", version = "0.0.1", edition = "2018"}
-//     [dependencies]
-//     clap={version="4", features=["derive"]}
+//     package = { name = "script", version = "1.0.0", edition = "2018"}
 // scriptisto-end
 
 use std::{collections::HashMap, process::Command};
