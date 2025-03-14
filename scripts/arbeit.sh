@@ -11,19 +11,22 @@ switch-workspace ()
     hyprctl dispatch workspace $1
 }
 
-ndnd
-switch-workspace 9
-hyprctl dispatch exec signal-desktop
-hyprctl dispatch exec firefox web.whatsapp.com
-sleep 5
-switch-workspace 1
-
 # WIFISSID="$(iwctl station wlan0 show | grep "Connected network" | awk '{ print $3 }')"
 WIFISSID="$(nmcli device show | grep "GENERAL.CONNECTION" | awk '{ print $2}' | head --lines=1)"
 
 if [[ "$WIFISSID" != "Science-Hotspot" ]]; then
     echo "Not at work"
     send-notification "Not at Work"
+fi
+
+ndnd
+sleep 2
+switch-workspace 9
+hyprctl dispatch exec signal-desktop
+sleep 5
+switch-workspace 1
+
+if [[ "$WIFISSID" != "Science-Hotspot" ]]; then
     exit
 fi
 
