@@ -1,5 +1,5 @@
 [user]
-	email = lars.e.janssen@gmail.com
+	email = lars.e.janssen@protonmail.com
 	name = Lars Janssen
 
 [includeif "gitdir:~/Projects/private/"]
