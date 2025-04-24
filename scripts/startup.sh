@@ -19,7 +19,9 @@ sleep 2
 switch-workspace 9
 hyprctl dispatch exec signal-desktop
 sleep 5
-./firstWorkspaces.sh
+~/scripts/firstWorkspaces.sh
+switch-workspace 9
+~/scripts/firstWorkspaces.sh
 
 if [[ "$WIFISSID" != "Science-Hotspot" ]]; then
     echo "Not at work"
