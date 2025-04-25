@@ -1,11 +1,10 @@
 #!/bin/bash
-MONITORCOUNT="$(hyprctl monitors | grep Monitor -c)"
 
-if [[ "$MONITORCOUNT" == "1" ]]; then
-    hyprlock & sleep 2 && systemctl suspend
-fi
+EDP="$(hyprctl monitors | grep eDP -c)"
 
-
-if [[ "$MONITORCOUNT" != "1" ]]; then
+if [[ "$EDP" == 1 && "$MONITORCOUNT" != "1" ]]; then
     hyprctl keyword monitor "desc:Chimei Innolux Corporation 0x14E7,disable"
+    exit
 fi
+
+systemctl suspend
