@@ -11,14 +11,13 @@ switch-workspace ()
     hyprctl dispatch workspace $1
 }
 
-# WIFISSID="$(iwctl station wlan0 show | grep "Connected network" | awk '{ print $3 }')"
 WIFISSID="$(nmcli device show | grep "GENERAL.CONNECTION" | awk '{ print $2}' | head --lines=1)"
 
 ndnd
-sleep 2
+sleep 1
 switch-workspace 9
 hyprctl dispatch exec signal-desktop
-sleep 5
+sleep 3
 ~/scripts/firstWorkspaces.sh
 switch-workspace 9
 ~/scripts/firstWorkspaces.sh
