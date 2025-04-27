@@ -42,6 +42,7 @@ alias editnotification='nvim ~/.config/fnott/fnott.ini && fnottctl quit && fnott
 # Aliases
 alias disablekanata='systemctl --user stop kanata.service'
 alias enablekanata='systemctl --user start kanata.service'
+alias update='~/scripts/update.sh'
 alias L='ls -l --color'
 alias dnd='fnottctl pause'
 alias ndnd='fnottctl unpause'
