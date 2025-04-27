@@ -40,6 +40,8 @@ alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux
 alias editnotification='nvim ~/.config/fnott/fnott.ini && fnottctl quit && fnott &>/dev/null &'
 
 # Aliases
+alias disablekanata='systemctl --user stop kanata.service'
+alias enablekanata='systemctl --user start kanata.service'
 alias L='ls -l --color'
 alias dnd='fnottctl pause'
 alias ndnd='fnottctl unpause'
