@@ -31,35 +31,44 @@
   ; (multi f24 (tap-hold $tt $ht ; rmet))
   grvlayer (multi f24 (tap-hold $tt $ht grv (layer-toggle layers)))
   base (layer-switch base)
+  hardcore (layer-switch hardcore)
   game (layer-switch game)
 )
 
-(deflayer base
-  esc
+(deflayer hardcore
+     f24
 @grvlayer 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
- @caps @a   @s   @d   @f    g   h    @j   @k   @l   @;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt lmet           spc            ralt rmet rctl
+     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    @caps @a   @s   @d   @f   g    h    @j   @k   @l   @;    '    ret
+     f24  z    x    c    v    b    n    m    ,    .    /    f24
+     f24  f24  f24           spc             f24  f24  f24
 )
 
+(deflayer base
+     esc
+@grvlayer 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    @caps @a   @s   @d   @f   g    h    @j   @k   @l   @;    '    ret
+     lsft z    x    c    v    b    n    m    ,    .    /    rsft
+     lctl lalt lmet           spc            ralt rmet rctl
+)
 
 (deflayer layers
   _ 
-  _ @base  @game _    _    _    _    _    _    _    _    _    _  lrld
+  _ @base  @game @hardcore _    _    _    _    _    _    _    _    _  lrld
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _  @game  _    _    _    _    _    _    _
-  _    _    _    _    _  @base    _    _    _    _    _    _
+  _    _    _    _    _ @game @hardcore   _    _    _    _    _    _
+  _    _    _    _    _ @base   _    _    _    _    _    _
   _    _    _              _              _    _    _
 
 )
 
 (deflayer game
-  esc
+     esc
 @grvlayer 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lalt lmet           spc            ralt rmet rctl
+     tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    @caps a    s    d    f    g    h    j    k    l    ;    '    ret
+     lsft z    x    c    v    b    n    m    ,    .    /    rsft
+     lctl lalt lmet           spc            ralt rmet rctl
 
 )
