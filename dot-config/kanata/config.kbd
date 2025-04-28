@@ -4,25 +4,62 @@
 )
 
 (defsrc
-  caps a s d f j k l ;
+  esc  
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
 )
+
 (defvar
-  tap-time 150
+  tap-time 200
   hold-time 200
+  tt $tap-time
+  ht $hold-time
 )
 
 (defalias
-  escctrl (tap-hold $tap-time $hold-time esc lctl)
-  a (multi f24 (tap-hold $tap-time $hold-time a lmet))
-  s (multi f24 (tap-hold $tap-time $hold-time s lalt))
-  d (multi f24 (tap-hold $tap-time $hold-time d lsft))
-  f (multi f24 (tap-hold $tap-time $hold-time f lctl))
-  j (multi f24 (tap-hold $tap-time $hold-time j rctl))
-  k (multi f24 (tap-hold $tap-time $hold-time k rsft))
-  l (multi f24 (tap-hold $tap-time $hold-time l ralt))
-  ; (multi f24 (tap-hold $tap-time $hold-time ; rmet))
+  caps (tap-hold $tap-time $hold-time esc lctl)
+  a (multi f24 (tap-hold $tt $ht a lmet))
+  s (multi f24 (tap-hold $tt $ht s lalt))
+  d (multi f24 (tap-hold $tt $ht d lsft))
+  f (multi f24 (tap-hold $tt $ht f lctl))
+  j (multi f24 (tap-hold $tt $ht j rctl))
+  k (multi f24 (tap-hold $tt $ht k rsft))
+  l (multi f24 (tap-hold $tt $ht l ralt))
+  ; (multi f24 (tap-hold $tt $ht ; rmet))
+  grvlayer (multi f24 (tap-hold $tt $ht grv (layer-toggle layers)))
+  base (layer-switch base)
+  game (layer-switch game)
 )
 
 (deflayer base
-  @escctrl @a @s @d @f @j @k @l @;
+  esc
+@grvlayer 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+ @caps @a   @s   @d   @f    g   h    @j   @k   @l   @;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lalt lmet           spc            ralt rmet rctl
+)
+
+
+(deflayer layers
+  _ 
+  _ @base  @game _    _    _    _    _    _    _    _    _    _  lrld
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _  @game  _    _    _    _    _    _    _
+  _    _    _    _    _  @base    _    _    _    _    _    _
+  _    _    _              _              _    _    _
+
+)
+
+(deflayer game
+  esc
+@grvlayer 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lalt lmet           spc            ralt rmet rctl
+
 )

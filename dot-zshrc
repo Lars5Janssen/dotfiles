@@ -34,14 +34,16 @@ zinit cdreplay -q
 # Edit aliases
 alias edit='nvim ~/.zshrc && source ~/.zshrc'
 alias editbar='cd ~/.config/waybar/ && nvim ~/.config/waybar/config.jsonc && cd - && ~/.config/waybar/reloadWaybar.sh &>/dev/null'
+alias editkeyremap='nvim --cmd "set filetype=lisp" ~/.config/kanata/config.kbd && reloadkeyremap'
 alias editterm='nvim ~/.config/kitty/kitty.conf'
 alias editwm='cd ~/.config/hypr/ && nvim ~/.config/hypr/hyprland.conf && cd -'
 alias edittmux='nvim ~/.config/tmux/tmux.conf && tmux source ~/.config/tmux/tmux.conf'
 alias editnotification='nvim ~/.config/fnott/fnott.ini && fnottctl quit && fnott &>/dev/null &'
 
 # Aliases
-alias disablekanata='systemctl --user stop kanata.service'
-alias enablekanata='systemctl --user start kanata.service'
+alias disablekeyremap='systemctl --user stop kanata.service'
+alias enablekeyremap='systemctl --user start kanata.service'
+alias reloadkeyremap='systemctl --user restart kanata.service' 
 alias update='~/scripts/update.sh'
 alias L='ls -l --color'
 alias dnd='fnottctl pause'
