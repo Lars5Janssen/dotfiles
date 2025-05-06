@@ -1,6 +1,6 @@
 #! /bin/bash
 
-def_sink_vol="50%"
+def_sink_vol="75%"
 def_source_vol="100%"
 
 if [[ $1 == "source" ]]; then
