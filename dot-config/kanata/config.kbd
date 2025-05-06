@@ -1,6 +1,10 @@
 ;; defsrc is still necessary
+
 (defcfg
   process-unmapped-keys yes
+  linux-dev-names-exclude (
+                           "Logitech G502"
+                           )
 )
 
 (defsrc
@@ -33,10 +37,23 @@
   base (layer-switch base)
   hardcore (layer-switch hardcore)
   game (layer-switch game)
+  ;; umlaute
+  ue (switch 
+       ((input real lshift)) (unicode Ü) break
+       () (unicode ü) break
+       )
+  oe (switch 
+       ((input real lshift)) (unicode Ö) break
+       () (unicode ö) break
+       )
+  ae (switch 
+       ((input real lshift)) (unicode Ä) break
+       () (unicode ä) break
+       )
 )
 
 (deflayer hardcore
-     f24
+     esc
 @grvlayer 1    2    3    4    5    6    7    8    9    0    -    =    bspc
      tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
     @caps @a   @s   @d   @f   g    h    @j   @k   @l   @;    '    ret
@@ -56,8 +73,8 @@
 (deflayer layers
   _ 
   _ @base  @game @hardcore _    _    _    _    _    _    _    _    _  lrld
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _ @game @hardcore   _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    @ue  _    _
+  _    _    _    _    _ @game @hardcore   _    _    _    @oe @ae   _
   _    _    _    _    _ @base   _    _    _    _    _    _
   _    _    _              _              _    _    _
 
@@ -67,7 +84,7 @@
      esc
 @grvlayer 1    2    3    4    5    6    7    8    9    0    -    =    bspc
      tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-    @caps a    s    d    f    g    h    j    k    l    ;    '    ret
+     f24  a    s    d    f    g    h    j    k    l    ;    '    ret
      lsft z    x    c    v    b    n    m    ,    .    /    rsft
      lctl lalt lmet           spc            ralt rmet rctl
 
