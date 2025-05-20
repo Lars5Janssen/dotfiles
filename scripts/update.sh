@@ -8,11 +8,11 @@ fi
 echo "On Arch Linux; executing update routine"
 
 echo
-echo "Updateing with FLATPAK"
-flatpak update --assumeyes
-echo
 echo "Updateing with PACMAN"
 sudo pacman -Syyyu
+echo
+echo "Updateing with FLATPAK"
+flatpak update --assumeyes
 echo
 echo "Updateing with PARU"
 paru -Syyyu
