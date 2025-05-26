@@ -71,3 +71,5 @@ text/vbscript=nvim.desktop
 text/calendar=nvim.desktop
 text/x-google-video-pointer=nvim.desktop
 text/x-moc=nvim.desktop
+x-scheme-handler/nxm=vortex-steamtinkerlaunch-dl.desktop
+x-scheme-handler/nxm-protocol=vortex-steamtinkerlaunch-dl.desktop

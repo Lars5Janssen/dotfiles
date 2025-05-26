@@ -1,44 +1,29 @@
 #! /bin/bash
-# A script that activates when the computer is connected to the wifi of my workplace
-# it then executes my "morning work routine" whatever that my be
+sleep 3
 
-send-notification ()
-{
-    XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send "$1" "$2" $3 $4 
-}
-switch-workspace ()
-{
-    hyprctl dispatch workspace $1
-}
-
-WIFISSID="$(nmcli device show | grep "GENERAL.CONNECTION" | awk '{ print $2}' | head --lines=1)"
+source ~/scripts/abstractions/wm.sh
+source ~/scripts/abstractions/send-user-notification.sh
+source ~/scripts/abstractions/check_git.sh
 
 ndnd
-sleep 1
-switch-workspace 9
-hyprctl dispatch exec signal-desktop
-sleep 3
-~/scripts/firstWorkspaces.sh
-switch-workspace 9
-~/scripts/firstWorkspaces.sh
 
-if [[ "$WIFISSID" != "Science-Hotspot" ]]; then
-    echo "Not at work"
-    send-notification "Not at Work"
-    exit
-fi
+exec-programm blueman-applet
+exec-programm fnott
+exec-programm kdeconnect-app
+exec-programm "keepassxc ~/KPXCDB/privat.kdbx"
+exec-programm nextcloud
+exec-programm nm-applet
+exec-programm protonmail-bridge
+exec-programm "flatpak run org.mozilla.Thunderbird"
+# exec-programm polkit
+./setVol.sh sink default
+rm /home/lars/.var/app/com.jetbrains.IntelliJ-IDEA-Ultimate/config/JetBrains/IntelliJIdea2024.1/.lock
 
-echo "At work; Executing work routine"
-send-notification "At Work" "Executing work routine"
+# sleep 5
+# checkgitrepo "/home/l/dotfiles/"
+# sleep 1
+# checkgitrepo "/home/l/Projects/private/ansible/"
 
 sleep 2
-
-hyprctl dispatch closewindow "title:KDE Connect"
-switch-workspace 10
-nmcli connection up "DESY VPN" & sleep 0.5 && hyprctl dispatch focuswindow "initialtitle:privat.kdbx \[Locked\] - KeePassXC"
-
 switch-workspace 2
-switch-workspace 1
-switch-workspace 10
-
-# switch-workspace 1
+steam
