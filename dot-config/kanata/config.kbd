@@ -18,7 +18,7 @@
 
 (defvar
   tap-time 200
-  hold-time 200
+  hold-time 150
   tt $tap-time
   ht $hold-time
 )
