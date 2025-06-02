@@ -2,9 +2,6 @@
 
 (defcfg
   process-unmapped-keys yes
-  linux-dev-names-exclude (
-                           "Logitech G502"
-                           )
 )
 
 (defsrc
@@ -50,6 +47,7 @@
        ((input real lshift)) (unicode Ä) break
        () (unicode ä) break
        )
+  sharps (unicode ß)
 )
 
 (deflayer hardcore
@@ -74,7 +72,7 @@
   _ 
   _ @base  @game @hardcore _    _    _    _    _    _    _    _    _  lrld
   _    _    _    _    _    _    _    _    _    _    _    @ue  _    _
-  caps _    _    _    _ @game @hardcore   _    _    _    @oe @ae   _
+  caps _ @sharps _    _ @game @hardcore   _    _    _    @oe @ae   _
   _    _    _    _    _ @base   _    _    _    _    _    _
   _    _    _              _              _    _    _
 
