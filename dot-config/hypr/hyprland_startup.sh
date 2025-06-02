@@ -6,20 +6,21 @@ source ~/scripts/abstractions/send-user-notification.sh
 source ~/scripts/abstractions/wm.sh
 source ~/scripts/abstractions/check_git.sh
 
-sleep 1
-switch-workspace 9
-exec-programm signal-desktop
-sleep 3
+switch-workspace 10
+switch-workspace 2
+switch-workspace 1
+switch-workspace 10
+switch-workspace 2
+switch-workspace 1
 
-switch-workspace 4
-switch-workspace 3
-switch-workspace 2
-switch-workspace 1
-switch-workspace 9
-switch-workspace 4
-switch-workspace 3
-switch-workspace 2
-switch-workspace 1
+exec-programm signal-desktop
+exec-programm steam
+exec-programm "flatpak run com.discordapp.Discord"
+
+sleep 15
+hyprctl dispatch moveworkspacetomonitor 7 +1
+hyprctl dispatch moveworkspacetomonitor 9 +1
+hyprctl dispatch moveworkspacetomonitor 10 +1
 
 WIFISSID="$(nmcli device show | grep "GENERAL.CONNECTION" | awk '{ print $2}' | head --lines=1)"
 

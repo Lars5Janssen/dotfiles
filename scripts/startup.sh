@@ -19,11 +19,7 @@ exec-programm "flatpak run org.mozilla.Thunderbird"
 ./setVol.sh sink default
 rm /home/lars/.var/app/com.jetbrains.IntelliJ-IDEA-Ultimate/config/JetBrains/IntelliJIdea2024.1/.lock
 
-# sleep 5
-# checkgitrepo "/home/l/dotfiles/"
-# sleep 1
-# checkgitrepo "/home/l/Projects/private/ansible/"
-
-sleep 2
-switch-workspace 2
-steam
+sleep 5
+checkgitrepo "/home/l/dotfiles/"
+sleep 1
+checkgitrepo "/home/l/Projects/private/ansible/"
