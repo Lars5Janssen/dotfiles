@@ -2,6 +2,8 @@
 
 def_sink_vol="60%"
 def_source_vol="100%"
+def_laptop_source_vol="20%"
+laptop_source_name="alsa_input.pci-0000_00_1f.3.pro-input-0"
 
 if [[ $1 == "source" ]]; then
     current_source="$(pactl get-default-source)"
@@ -17,7 +19,11 @@ if [[ $1 == "source" ]]; then
         pactl set-source-mute $current_source false
         fi
         if [[ $2 == "default" ]]; then
-            pactl set-source-volume $current_source $def_source_vol
+            if [[ $current_source == $laptop_source_name ]]; then
+                pactl set-source-volume $current_source $def_laptop_source_vol
+            else
+                pactl set-source-volume $current_source $def_source_vol
+            fi
         else
             pactl set-source-volume $current_source $2
         fi

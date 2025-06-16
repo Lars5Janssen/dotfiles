@@ -70,7 +70,7 @@
 
 (deflayer layers
   _ 
-  _ @base  @game @hardcore _    _    _    _    _    _    _    _    _  lrld
+  _ @base  @game @hardcore _    _    _    _    _    _    _ @sharps _  lrld
   _    _    _    _    _    _    _    _    _    _    _    @ue  _    _
   caps _ @sharps _    _ @game @hardcore   _    _    _    @oe @ae   _
   _    _    _    _    _ @base   _    _    _    _    _    _
