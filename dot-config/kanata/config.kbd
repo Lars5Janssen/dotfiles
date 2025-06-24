@@ -2,6 +2,9 @@
 
 (defcfg
   process-unmapped-keys yes
+  linux-dev-names-exclude (
+                           "Logitech G502"
+                           )
 )
 
 (defsrc

@@ -16,11 +16,15 @@ switch-workspace 1
 exec-programm signal-desktop
 exec-programm steam
 exec-programm "flatpak run com.discordapp.Discord"
+hyprctl dispatch focuswindow class:proton-bridge
+hyprctl dispatch killactive
 
 sleep 15
 hyprctl dispatch moveworkspacetomonitor 7 +1
 hyprctl dispatch moveworkspacetomonitor 9 +1
 hyprctl dispatch moveworkspacetomonitor 10 +1
+switch-workspace 2
+switch-workspace 1
 
 WIFISSID="$(nmcli device show | grep "GENERAL.CONNECTION" | awk '{ print $2}' | head --lines=1)"
 
