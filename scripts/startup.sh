@@ -15,8 +15,11 @@ exec-programm nextcloud
 exec-programm nm-applet
 exec-programm protonmail-bridge
 exec-programm "flatpak run org.mozilla.Thunderbird"
-# exec-programm polkit
+exec-programm steam
+exec-programm signal-desktop
+exec-programm "flatpak run com.discordapp.Discord"
 ./setVol.sh sink default
+
 rm /home/lars/.var/app/com.jetbrains.IntelliJ-IDEA-Ultimate/config/JetBrains/IntelliJIdea2024.1/.lock
 
 sleep 5
