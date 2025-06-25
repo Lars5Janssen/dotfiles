@@ -1,4 +1,5 @@
 #! /bin/bash
+cd ~/.config/waybar/
 killall waybar
 sleep 0.2
 
@@ -28,4 +29,5 @@ echo "" >> $final_config
 echo "$config" >> $final_config
 echo "}" >> $final_config
 
+cd -
 waybar --config $final_config &
