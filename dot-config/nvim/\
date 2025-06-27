@@ -1,0 +1,10 @@
+return {
+    {
+        'neovim/nvim-lspconfig'
+        dependencies = {
+            "folke/which-key.nvim",
+        },
+        config = function()
+        end,
+    },
+}
