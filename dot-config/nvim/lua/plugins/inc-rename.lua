@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"folke/which-key.nvim",
 	},
+	lazy = false,
 	config = function()
 		require("inc_rename").setup()
 		local wk = require("which-key")
