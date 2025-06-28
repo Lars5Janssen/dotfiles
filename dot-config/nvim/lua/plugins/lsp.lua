@@ -9,6 +9,7 @@ return {
 		"L3MON4D3/LuaSnip",
 	},
 	config = function()
+		local wk = require("which-key")
 		local ensure_installed = {
 			"vtsls",
 			"html",
@@ -67,6 +68,20 @@ return {
 				end,
 			},
 		})
+
+		wk.add({
+			{ mode = "n" },
+			{
+				"<leader>a",
+				function()
+					vim.lsp.buf.code_action()
+				end,
+				desc = "Code actions",
+				silent = true,
+				buffer = vim.api.nvim_get_current_buf(),
+			},
+		})
+
 		local lspconfig = require("lspconfig")
 		local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 		require("mason").setup({})
