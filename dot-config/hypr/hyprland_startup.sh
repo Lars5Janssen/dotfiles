@@ -18,6 +18,7 @@ elif [[ "$HOST" == "archPC" ]]; then
 else
 fi
 sleep 15
+send-notification "now"
 hyprctl dispatch moveworkspacetomonitor 7 +1
 hyprctl dispatch moveworkspacetomonitor 9 +1
 hyprctl dispatch moveworkspacetomonitor 10 +1
