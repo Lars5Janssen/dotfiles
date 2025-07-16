@@ -43,6 +43,7 @@ return {
             -- lspconfig.rustowllsp.setup({})
             -- lspconfig.rust_analyzer.setup({})
             lspconfig.jedi_language_server.setup({})
+            lspconfig.typescript_language_server.setup({})
             lspconfig.basedpyright.setup({})
             lspconfig.jsonls.setup({})
             lspconfig.taplo.setup({})
