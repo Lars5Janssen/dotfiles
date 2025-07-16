@@ -27,6 +27,7 @@ return {
 		wk.add({
 			{ mode = { "n", "v" } },
 			{ "<leader>l", group = "formatter" },
+			{ "<leader>lt", "<CMD>! go tool templ fmt .<CR><CR>", desc = "templ format" },
 			{
 				"<leader>lf",
 				function()

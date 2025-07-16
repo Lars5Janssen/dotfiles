@@ -12,10 +12,53 @@ return {
 		local wk = require("which-key")
 		local ensure_installed = {
 			"vtsls",
+			"sqls",
+			"templ",
 			"html",
+			"htmx",
+			"tailwindcss",
 			"lua_ls",
 			"gopls",
 		}
+
+		local lspconfig = require("lspconfig")
+		local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+		require("mason").setup({})
+		require("mason-lspconfig").setup({
+			ensure_installed = ensure_installed,
+			handlers = {
+				function(server)
+					lspconfig[server].setup({
+						capabilities = lsp_capabilities,
+					})
+				end,
+				["html"] = function()
+					lspconfig.html.setup({
+						capabilities = lsp_capabilities,
+						filetype = { "html", "templ" },
+					})
+				end,
+				["htmx"] = function()
+					lspconfig.htmx.setup({
+						capabilities = lsp_capabilities,
+						filetype = { "html", "templ" },
+					})
+				end,
+				-- ["tailwindcss"] = function()
+				-- 	lspconfig.tailwindcss.setup({
+				-- 		capabilities = lsp_capabilities,
+				-- 		filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+				-- 		settings = {
+				-- 			tailwindCSS = {
+				-- 				includeLanguages = {
+				-- 					templ = "html",
+				-- 				},
+				-- 			},
+				-- 		},
+				-- 	})
+				-- end,
+			},
+		})
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		cmp.setup({
@@ -82,18 +125,9 @@ return {
 			},
 		})
 
-		local lspconfig = require("lspconfig")
-		local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
-		require("mason").setup({})
-		require("mason-lspconfig").setup({
-			ensure_installed = ensure_installed,
-			handlers = {
-				function(server)
-					lspconfig[server].setup({
-						capabilities = lsp_capabilities,
-					})
-				end,
-			},
+		vim.diagnostic.enable = true
+		vim.diagnostic.config({
+			virtual_lines = true,
 		})
 	end,
 }
