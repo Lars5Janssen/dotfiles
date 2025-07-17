@@ -15,7 +15,7 @@ return {
 			"sqls",
 			"templ",
 			"html",
-            "rust-languageserver",
+            "rust_analyzer",
 			"htmx",
 			"tailwindcss",
 			"lua_ls",
